@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maven on egli.dev</title>
+    <link>http://egli.dev/tags/maven/</link>
+    <description>Recent content in Maven on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Dec 2013 15:42:55 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using the maven release plugin with gpg-agent</title>
+      <link>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</link>
+      <pubDate>Fri, 06 Dec 2013 15:42:55 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</guid>
+      <description>When creating releases using the maven release and the pgp plugin you are asked to sign your release. Due to an annoying bug in the release plugin you&amp;#39;ll never see the prompt and mvn will just hang. One way to get around this is to use the gpg-agent and to trigger gpg action before building the release so that gpg-agent will cache your passphrase (at least for some time).</description>
+    </item>
+    
+  </channel>
+</rss>

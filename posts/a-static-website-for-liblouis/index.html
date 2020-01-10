@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='
+I must say that I really enjoy working with Jekyll. It is dead-simple
+and still powerfull enough to the things I need. At first I was trying
+to go for a Clojure based solution such as static or madness. I had
+looked at static before and I like it, however I wanted to use
+bootstrap and wasn&#39;t really into converting the bootstrap html to a
+hiccup template. madness on the other hand uses enlive, so it would
+have been possible to use html templates, but what I didn&#39;t like was
+the fact that the generator and the actual site were basically the
+same code base just in different (git) branches.
+'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='A static website for liblouis based on Jekyll • egli.dev'>
+<meta property='og:description' content='
+I must say that I really enjoy working with Jekyll. It is dead-simple
+and still powerfull enough to the things I need. At first I was trying
+to go for a Clojure based solution such as static or madness. I had
+looked at static before and I like it, however I wanted to use
+bootstrap and wasn&#39;t really into converting the bootstrap html to a
+hiccup template. madness on the other hand uses enlive, so it would
+have been possible to use html templates, but what I didn&#39;t like was
+the fact that the generator and the actual site were basically the
+same code base just in different (git) branches.
+'>
+<meta property='og:url' content='http://egli.dev/posts/a-static-website-for-liblouis/'>
+<meta property='og:site_name' content='egli.dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='jekyll'><meta property='article:tag' content='liblouis'><meta property='article:published_time' content='2013-10-04T09:21:55Z'/><meta property='article:modified_time' content='2013-10-04T09:21:55Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+  <title>A static website for liblouis based on Jekyll • egli.dev</title>
+  <link rel='canonical' href='http://egli.dev/posts/a-static-website-for-liblouis/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/tags/'>Tags</a>
+      </li><li class='item'>
+        <a href='/posts/'>Archive</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>egli.dev</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>A static website for liblouis based on Jekyll</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2013-10-04T09:21:55Z'>2013-10-04</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>
+I must say that I really enjoy working with <a href="http://jekyllrb.com">Jekyll</a>. It is dead-simple
+and still powerfull enough to the things I need. At first I was trying
+to go for a <a href="http://clojure.org">Clojure</a> based solution such as <a href="https://github.com/nakkaya/static">static</a> or <a href="https://github.com/algernon/madness">madness</a>. I had
+looked at static before and I like it, however I wanted to use
+<a href="http://getbootstrap.com/">bootstrap</a> and wasn&#39;t really into converting the bootstrap html to a
+<a href="https://github.com/weavejester/hiccup">hiccup</a> template. madness on the other hand uses <a href="https://github.com/cgrand/enlive">enlive</a>, so it would
+have been possible to use html templates, but what I didn&#39;t like was
+the fact that the generator and the actual site were basically the
+same code base just in different (git) branches.
+</p>
+<p>
+I&#39;m sure these problems could have easily be rectified, static is a
+very small and simple code base, it would probably be straight-forward
+to extend it. But in the end it&#39;s the website that I want and the
+generator is just a means to that end so, let&#39;s go for something that
+&#34;just works&#34; and is widely used.
+</p>
+<p>
+Enter Jekyll.
+</p>
+<p>
+If you look around you&#39;ll find lots of people saying that you should
+forget about Jekyll and go for <a href="http://octopress.org/">Octopress</a> instead. Octopress has
+everything that Jekyll doesn&#39;t have, etc. Turns out Jekyll has all I
+need. I can create a nice layout based on bootstrap and do some small
+tweaks using the <a href="http://wiki.shopify.com/Liquid">Liquid template language</a> which is very similar to the
+template language used by <a href="https://www.djangoproject.com/">Django</a>.
+</p>
+<p>
+Another great thing is that the content is just <a href="http://daringfireball.net/projects/markdown/">markdown</a>, or <a href="http://redcloth.org/textile/">textile</a>.
+This is ideal for old Emacs hats or screen readers. Since most of the
+developers of <a href="https://code.google.com/p/liblouis/">liblouis</a> use screen readers or/and braille displays and
+often have difficulties with web interfaces this is a big bonus.
+</p>
+<p>
+So, take Jekyll, sprinkle with a bit of bootstrap and you&#39;ll get a
+nice static website for a software project such as <a href="https://code.google.com/p/liblouis/">liblouis</a>. There is
+a landing page, news, online documentation, downloads and links to the
+Issue tracker and code repo on <a href="https://code.google.com/p/liblouis/">Google Code</a>. All you need basically.
+</p>
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/jekyll/'>jekyll</a>, <a class='tag' href='/tags/liblouis/'>liblouis</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/egli' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:christian@egli.dev' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2013-2020 Christian Egli &ndash; Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License" /></a></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>liblouis on egli.dev</title>
+    <link>http://egli.dev/categories/liblouis/</link>
+    <description>Recent content in liblouis on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 May 2015 17:25:40 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/categories/liblouis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why reimplementing liblouis in Java is a waste of your time</title>
+      <link>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</link>
+      <pubDate>Mon, 04 May 2015 17:25:40 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</guid>
+      <description>&lt;p&gt;
+There are some proponents of the &lt;a href=&#34;https://github.com/snaekobbi&#34;&gt;Braille in DAISY Pipeline 2 project&lt;/a&gt;
+who would like to re-implement &lt;a href=&#34;https://github.com/liblouis/liblouis&#34;&gt;liblouis&lt;/a&gt; in Java. While I would much
+rather hack in Java than in C I still think it&amp;#39;s not a good idea to
+re-implement liblouis in Java.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

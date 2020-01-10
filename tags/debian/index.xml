@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on egli.dev</title>
+    <link>http://egli.dev/tags/debian/</link>
+    <description>Recent content in Debian on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 11 Oct 2013 13:53:55 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using dh_make to generate debian control files</title>
+      <link>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</link>
+      <pubDate>Fri, 11 Oct 2013 13:53:55 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</guid>
+      <description>In order to properly deploy software to the production servers ideally it should be packaged as a Debian package. This ensures that I have all the needed dependencies, that the server is restarted and all the files are removed would I ever remove the package.  For Maven based projects such as the DAISY Pipeline this means that you&amp;#39;ll be using a Maven plugin such as jdeb to create the deb automatically.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>liblouis on egli.dev</title>
+    <link>http://egli.dev/tags/liblouis/</link>
+    <description>Recent content in liblouis on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/liblouis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Continuous integration for liblouis</title>
+      <link>http://egli.dev/posts/travis-for-liblouis/</link>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/travis-for-liblouis/</guid>
+      <description>&lt;p&gt;
+Once in a while when creating a pull request for projects on github I&amp;#39;m
+pleasantly surprised that this automatically launches a build server,
+runs the test suite for the project and hopefully gives you a green
+light for your pull request.
+&lt;/p&gt;
+&lt;p&gt;
+For liblouis we did have a self-hosted continuous integration solution
+based on Jenkins for a long time but it seems to have fallen prey to
+some bit rot.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A static website for liblouis based on Jekyll</title>
+      <link>http://egli.dev/posts/a-static-website-for-liblouis/</link>
+      <pubDate>Fri, 04 Oct 2013 09:21:55 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/a-static-website-for-liblouis/</guid>
+      <description>&lt;p&gt;
+I must say that I really enjoy working with &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;. It is dead-simple
+and still powerfull enough to the things I need. At first I was trying
+to go for a &lt;a href=&#34;http://clojure.org&#34;&gt;Clojure&lt;/a&gt; based solution such as &lt;a href=&#34;https://github.com/nakkaya/static&#34;&gt;static&lt;/a&gt; or &lt;a href=&#34;https://github.com/algernon/madness&#34;&gt;madness&lt;/a&gt;. I had
+looked at static before and I like it, however I wanted to use
+&lt;a href=&#34;http://getbootstrap.com/&#34;&gt;bootstrap&lt;/a&gt; and wasn&amp;#39;t really into converting the bootstrap html to a
+&lt;a href=&#34;https://github.com/weavejester/hiccup&#34;&gt;hiccup&lt;/a&gt; template. madness on the other hand uses &lt;a href=&#34;https://github.com/cgrand/enlive&#34;&gt;enlive&lt;/a&gt;, so it would
+have been possible to use html templates, but what I didn&amp;#39;t like was
+the fact that the generator and the actual site were basically the
+same code base just in different (git) branches.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

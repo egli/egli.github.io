@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clojure on egli.dev</title>
+    <link>http://egli.dev/tags/clojure/</link>
+    <description>Recent content in Clojure on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Delete a file after it&#39;s being served</title>
+      <link>http://egli.dev/posts/delete-a-file-after-its-being-served/</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/delete-a-file-after-its-being-served/</guid>
+      <description>Seen on #clojure:  nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &amp;#34;/tmp/123324.pdf&amp;#34;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream  justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,22 +4,32 @@
   
   <url>
     <loc>http://egli.dev/tags/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/emacs/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/tags/org-mode/</loc>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</loc>
+    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
   </url>
   
   <url>
@@ -29,11 +39,6 @@
   
   <url>
     <loc>http://egli.dev/posts/fulltext-search-in-org-mode/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/org-mode/</loc>
     <lastmod>2018-09-20T13:52:47+02:00</lastmod>
   </url>
   

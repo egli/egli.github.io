@@ -5,10 +5,19 @@
     <link>http://egli.dev/posts/</link>
     <description>Recent content in Archive on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 20 Sep 2018 13:52:47 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 Nov 2019 15:22:21 +0100</lastBuildDate>
     
 	<atom:link href="http://egli.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using org-mode for meeting minutes</title>
+      <link>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</link>
+      <pubDate>Fri, 01 Nov 2019 15:22:21 +0100</pubDate>
+      
+      <guid>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</guid>
+      <description>Due to an unfortunate series of events I&amp;#39;m back in the business of taking meeting minutes. After a meeting I want to know    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.</description>
+    </item>
     
     <item>
       <title>Fulltext Search in org-mode</title>

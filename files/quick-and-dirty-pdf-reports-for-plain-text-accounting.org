@@ -1,0 +1,66 @@
+#+options: toc:nil author:nil
+#+title: Financial Reports
+
+#+LATEX_HEADER: \usepackage{libertine}
+#+LATEX_HEADER: \usepackage{booktabs}
+
+* Balance sheet
+#+NAME: Balance Sheet
+#+BEGIN_SRC shell :exports results
+hledger balancesheet -f demo.journal -O csv --empty --value
+#+END_SRC
+
+#+ATTR_LATEX: :align lr
+#+RESULTS: Balance Sheet
+| Balance Sheet 2017/12/31-2020/03/06   |                       |   |   |
+| Account                               | 2017/12/31-2020/03/06 |   |   |
+| Assets                                |                       |   |   |
+| Asset                                 | 52,661.92 USD         |   |   |
+| Asset:Cash                            | 300.00 USD            |   |   |
+| Asset:Bank                            | 25,336.71 USD         |   |   |
+| Asset:Bank:JP Morgan                  | 22,651.48 USD         |   |   |
+| Asset:Bank:Weels Fargo                | 2,275.23 USD          |   |   |
+| Asset:Bank:Wells Fargo                | 410.00 USD            |   |   |
+| Asset:Online Account                  | 125.21 USD            |   |   |
+| Asset:Online Account:Apple Pay        | 41.97 USD             |   |   |
+| Asset:Online Account:Paypal           | 83.24 USD             |   |   |
+| Asset:Stocks                          | 26,900.00 USD         |   |   |
+| Asset:Stocks:JP Morgan                | 26,900.00 USD         |   |   |
+| Total:                                | 52,661.92 USD         |   |   |
+| Liabilities                           |                       |   |   |
+| Liabilities                           | 0                     |   |   |
+| Liabilities:Credit Card               | 0                     |   |   |
+| Liabilities:Credit Card:Visa Platinum | 0                     |   |   |
+| Total:                                | 0                     |   |   |
+| Net:                                  | 52,661.92 USD         |   |   |
+
+* Income statement
+#+NAME: Income Statement
+#+BEGIN_SRC shell :exports results
+hledger incomestatement -f demo.journal -O csv
+#+END_SRC
+
+#+ATTR_LATEX: :align lr
+#+RESULTS: Income Statement
+| Income Statement 2017/12/31-2020/03/06 |                       |   |   |
+| Account                                | 2017/12/31-2020/03/06 |   |   |
+| Revenues                               |                       |   |   |
+| Revenue:Capital Gain in stocks         | 300.00 USD            |   |   |
+| Revenue:Fx Revenue                     | 213.00 USD            |   |   |
+| Revenue:Riding App                     | 300.00 USD            |   |   |
+| Revenue:Salary                         | 21,600.00 USD         |   |   |
+| Total:                                 | 22,413.00 USD         |   |   |
+| Expenses                               |                       |   |   |
+| Expenses:Car:Gas                       | 78.37 USD             |   |   |
+| Expenses:Clothing                      | -1,944.00 USD         |   |   |
+| Expenses:Housing:Maintenance           | -110.00 USD           |   |   |
+| Expenses:Housing:Property Tax          | 300.00 USD            |   |   |
+| Expenses:Housing:Rental                | 5,850.00 USD          |   |   |
+| Expenses:Leisure:Events                | 275.00 USD            |   |   |
+| Expenses:Leisure:Travel                | 2,678.00 USD          |   |   |
+| Expenses:Products:Clothing             | 80.00 USD             |   |   |
+| Expenses:Products:Food                 | 1,148.33 USD          |   |   |
+| Total:                                 | 8,355.70 USD          |   |   |
+| Net:                                   | 14,057.30 USD         |   |   |
+
+

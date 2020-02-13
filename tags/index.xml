@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/</link>
     <description>Recent content in Tags on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Nov 2019 15:22:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 15:01:56 +0100</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,18 +13,36 @@
     <item>
       <title>Emacs</title>
       <link>http://egli.dev/tags/emacs/</link>
-      <pubDate>Fri, 01 Nov 2019 15:22:21 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
       
       <guid>http://egli.dev/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>LaTeX</title>
+      <link>http://egli.dev/tags/latex/</link>
+      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      
+      <guid>http://egli.dev/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>org-mode</title>
       <link>http://egli.dev/tags/org-mode/</link>
-      <pubDate>Fri, 01 Nov 2019 15:22:21 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
       
       <guid>http://egli.dev/tags/org-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plaintextaccounting</title>
+      <link>http://egli.dev/tags/plaintextaccounting/</link>
+      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      
+      <guid>http://egli.dev/tags/plaintextaccounting/</guid>
       <description></description>
     </item>
     

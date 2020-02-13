@@ -5,10 +5,19 @@
     <link>http://egli.dev/tags/emacs/</link>
     <description>Recent content in Emacs on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Nov 2019 15:22:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 15:01:56 +0100</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick and dirty PDF reports for Plain Text Accounting</title>
+      <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</link>
+      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      
+      <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</guid>
+      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;#39;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?  hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;#39;s use the demo.</description>
+    </item>
     
     <item>
       <title>Using org-mode for meeting minutes</title>

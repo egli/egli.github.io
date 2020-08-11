@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>playdough on egli.dev</title>
+    <link>http://egli.dev/tags/playdough/</link>
+    <description>Recent content in playdough on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/playdough/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Playdough vs Construction Kit</title>
+      <link>http://egli.dev/posts/playdough-vs-construction-kit/</link>
+      <pubDate>Fri, 19 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://egli.dev/posts/playdough-vs-construction-kit/</guid>
+      <description>Clojure code is so maleable. You can just build anything you want. The flip side is that many of the things you want you will have to build yourself.  With the construction kit it is really easy to build the 3 models that you can build with it. If all you want is one of the 3 models then you&amp;#39;re fine. If you want something else though, you&amp;#39;ll find yourself scouring the internets and the source code of the construction kit and end up hacking around the framework.</description>
+    </item>
+    
+  </channel>
+</rss>

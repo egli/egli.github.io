@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GraalVM on egli.dev</title>
+    <link>http://egli.dev/tags/graalvm/</link>
+    <description>Recent content in GraalVM on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 31 Oct 2019 10:33:20 +0100</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/graalvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Native Image for Clojure Programs</title>
+      <link>http://egli.dev/posts/native-image-for-clojure-programs/</link>
+      <pubDate>Thu, 31 Oct 2019 10:33:20 +0100</pubDate>
+      
+      <guid>http://egli.dev/posts/native-image-for-clojure-programs/</guid>
+      <description>&lt;p&gt;
+The &lt;a href=&#34;https://github.com/liblouis/release-helpers&#34;&gt;release helper program to create liblouis releases&lt;/a&gt; would be a
+typical shell script: Move some files around, replace some text, etc.
+As always with shell scripting what starts out easy quickly becomes
+unwieldy as the requirements grow.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

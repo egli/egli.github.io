@@ -37,14 +37,14 @@ all my files and provide for a fast search capability?
 <meta property='og:site_name' content='egli.dev'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Emacs'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='fulltext'><meta property='article:tag' content='search'><meta property='article:published_time' content='2018-09-20T13:52:47&#43;02:00'/><meta property='article:modified_time' content='2018-09-20T13:52:47&#43;02:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>Fulltext Search in org-mode • egli.dev</title>
   <link rel='canonical' href='http://egli.dev/posts/fulltext-search-in-org-mode/'>
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
 :root{--color-accent:#ffcd00;}
 </style>
 
@@ -165,9 +165,9 @@ explore a dedicated package named <a href="https://github.com/abingham/emacs-cod
 but from reading the source it doesn&#39;t seem to provide that standard
 grep mode buffer.
 </p>
-<h1 id="headline-1">
+<h2 id="headline-1">
 Implementation
-</h1>
+</h2>
 <p>
 In the end I came up with the following snippet in my Emacs
 config. This gives me a new function <code>cgrep</code> that simply invokes
@@ -179,9 +179,9 @@ buffer, just like <code>rgrep</code> does.
   (interactive (<span style="color:#a6e22e">list</span> (grep-read-regexp)))
   (compilation-start (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;csearch -n %s&#34;</span> regexp) <span style="color:#e6db74">&#39;grep-mode</span>))</code></pre></div>
 </div>
-<h1 id="headline-2">
+<h2 id="headline-2">
 Flip side
-</h1>
+</h2>
 <p>
 By using <code>codesearch</code> you get blazingly fast search, that&#39;s for sure.
 There is a downside however: The list of files that you will be
@@ -235,7 +235,7 @@ slower than just using plain old <code>rgrep</code>.
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2013-2020 Christian Egli &ndash; Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License" /></a></p>
+  <p> &copy; 2013-2020 Christian Egli &ndash; Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License"></a></p>
 </div>
 
         </div>
@@ -244,7 +244,7 @@ slower than just using plain old <code>rgrep</code>.
     </div>
   </div><script>window.__assets_js_src="/assets/js/"</script>
 
-<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
 
 </body>
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qlocktwo on egli.dev</title>
+    <link>http://egli.dev/tags/qlocktwo/</link>
+    <description>Recent content in qlocktwo on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Sep 2018 15:59:36 +0200</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/qlocktwo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Optimal Word Grid for Qlocktwo</title>
+      <link>http://egli.dev/posts/optimal-word-grid-for-qlocktwo/</link>
+      <pubDate>Tue, 25 Sep 2018 15:59:36 +0200</pubDate>
+      
+      <guid>http://egli.dev/posts/optimal-word-grid-for-qlocktwo/</guid>
+      <description>&lt;p&gt;
+At &lt;a href=&#34;https://www.makerfairezurich.ch/&#34;&gt;Mini Maker Faire&lt;/a&gt; in Zürich I built a &lt;a href=&#34;https://qlocktwo.com/en/qlocktwo-classic/&#34;&gt;Qlocktwo&lt;/a&gt; clone from a
+&lt;a href=&#34;https://www.bastelgarage.ch/bausatze/mirrorclock-bausatz-schwarz-made-in-switzerland&#34;&gt;fantastic DIY kit&lt;/a&gt;. It was &lt;em&gt;a lot&lt;/em&gt; of soldering but I&amp;#39;m very happy with
+the result.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

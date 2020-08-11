@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ledger-cli on egli.dev</title>
+    <link>http://egli.dev/tags/ledger-cli/</link>
+    <description>Recent content in ledger-cli on egli.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 19 Mar 2019 09:50:26 +0100</lastBuildDate>
+    
+	<atom:link href="http://egli.dev/tags/ledger-cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tax season with ledger</title>
+      <link>http://egli.dev/posts/tax_season_with_ledger/</link>
+      <pubDate>Tue, 19 Mar 2019 09:50:26 +0100</pubDate>
+      
+      <guid>http://egli.dev/posts/tax_season_with_ledger/</guid>
+      <description> Accounting with ledger  2018-11-27 * Hort Expenses:Haushalt:Kinderbetreuung 529.75 Assets:Postcheck  Find all expenses for child care  $ ledger -f 2018.ledger reg -P Kinderbetreuung  Find all tax relevant donations  $ ledger -f 2018.ledger reg -P Expenses and %Tax  </description>
+    </item>
+    
+  </channel>
+</rss>

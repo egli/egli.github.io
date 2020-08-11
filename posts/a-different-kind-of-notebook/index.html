@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='
+Netflix just released Polynote, a a different kind of notebook as
+they say. Unlike Jupyter notebooks it supports, wait for it, mixing
+multiple languages in one notebook.
+
+
+But wait, wasn&#39;t this possible all along with Org Babel? Just look at
+the Babel web site and you&#39;ll know that is has been possible for a
+long time.
+'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='A Different Kind of Notebook • egli.dev'>
+<meta property='og:description' content='
+Netflix just released Polynote, a a different kind of notebook as
+they say. Unlike Jupyter notebooks it supports, wait for it, mixing
+multiple languages in one notebook.
+
+
+But wait, wasn&#39;t this possible all along with Org Babel? Just look at
+the Babel web site and you&#39;ll know that is has been possible for a
+long time.
+'>
+<meta property='og:url' content='http://egli.dev/posts/a-different-kind-of-notebook/'>
+<meta property='og:site_name' content='egli.dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-11-15T11:19:37&#43;01:00'/><meta property='article:modified_time' content='2019-11-15T11:19:37&#43;01:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.68.3" />
+
+  <title>A Different Kind of Notebook • egli.dev</title>
+  <link rel='canonical' href='http://egli.dev/posts/a-different-kind-of-notebook/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/tags/'>Tags</a>
+      </li><li class='item'>
+        <a href='/posts/'>Archive</a>
+      </li><li class='item'>
+        <a href='/about/'>About</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>egli.dev</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>A Different Kind of Notebook</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-11-15T11:19:37&#43;01:00'>2019-11-15</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>
+Netflix just released <a href="https://polynote.org/">Polynote</a>, a <em>a different kind of notebook</em> as
+they say. Unlike <a href="https://jupyter.org/">Jupyter notebooks</a> it supports, wait for it, <em>mixing
+multiple languages in one notebook</em>.
+</p>
+<p>
+But wait, wasn&#39;t this possible all along with <a href="https://orgmode.org/worg/org-contrib/babel/intro.html">Org Babel</a>? Just look at
+the Babel web site and you&#39;ll know that is has been possible for a
+long time.
+</p>
+<p>
+This reminds me of a nifty notebook that I wrote in June 2016 to trace
+license compliance of liblouis tables. It mixes shell code to fetch
+the relevant data and Clojure code to mangle it.
+</p>
+<p>
+The shell code is simple
+</p>
+<div class="export-block">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">#+NAME</span><span style="color:#75715e">: Other-license-tables</span>
+<span style="color:#75715e">#+BEGIN_SRC </span><span style="color:#75715e">shell</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>cd ~/src/liblouis/tables
+licensecheck --copyright --check<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\.(ctb|utb|cti|uti|dis)&#39;</span> --encoding utf8 --machine * | grep -v <span style="color:#e6db74">&#39;LGPL (v2.1 or later)&#39;</span> | grep -v <span style="color:#e6db74">&#39;LGPL (v3 or later)&#39;</span>
+<span style="color:#75715e">#+END_SRC</span></code></pre></div></div>
+<p>
+This will insert the data in your notebook. In this case you&#39;ll get a
+table of all files with unknown license
+</p>
+<div class="src src-org">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">#+RESULTS</span><span style="color:#75715e">: Other-license-tables</span>
+<span style="color:#e6db74">| ca-chardefs.cti | UNKNOWN | 2010 DocArch &lt;http:www.docarch.be&gt;                                                              |</span>
+<span style="color:#e6db74">| ca-g1.ctb       | UNKNOWN | 2010 DocArch &lt;http:www.docarch.be&gt;                                                              |</span>
+<span style="color:#e6db74">| es-new.dis      | UNKNOWN | 2010 DocArch &lt;http:www.docarch.be&gt;                                                              |</span>
+<span style="color:#e6db74">| es-old.dis      | UNKNOWN | 2010 DocArch &lt;http:www.docarch.be&gt;                                                              |</span>
+<span style="color:#e6db74">| ethio-g1.ctb    | UNKNOWN | 2012, 2015 Mesar Hameed &lt;mesar.hameed@gmail.com&gt; / 2012 Dr. Tamru E. Belay &lt;tamru@sympatico.ca&gt; |</span>
+<span style="color:#e6db74">| zh-hk.ctb       | UNKNOWN | 2009 KM Yuen, Keny Yuen, Alex Ho and Eric Yip / 2009 JJB Software, Inc. www.jjb-software.com    |</span></code></pre></div>
+</div>
+<p>
+If I come across as an old, know-it-all grump then probably because I
+am. Of course you cannot really compare Jupyter notebooks and Org
+babel. The usability is just one thing where they differ. But the
+claim to difference just because you support mixing multiple languages
+in one notebook seems a little bit exagerated.
+</p>
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/egli' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:christian@egli.dev' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2013-2020 Christian Egli &ndash; Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License"></a></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

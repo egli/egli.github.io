@@ -5,10 +5,19 @@
     <link>http://egli.dev/</link>
     <description>Recent content on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 12 Feb 2020 15:01:56 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 21:25:57 +0100</lastBuildDate>
     
 	<atom:link href="http://egli.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick and dirty PDF Reports for Plain Text Accounting - Part 2</title>
+      <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</link>
+      <pubDate>Mon, 10 Aug 2020 21:25:57 +0100</pubDate>
+      
+      <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</guid>
+      <description>Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.  If you are willing however to compromise somewhat in the looks department and don&amp;#39;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.  First of you probably need to install a few tools:   enscript    is used to generate Postscript from the output of hledger.</description>
+    </item>
     
     <item>
       <title>Quick and dirty PDF reports for Plain Text Accounting</title>

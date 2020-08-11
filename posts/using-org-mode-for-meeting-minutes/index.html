@@ -2,11 +2,11 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Due to an unfortunate series of events I&#39;m back in the business of taking meeting minutes. After a meeting I want to know    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.'>
+<meta name='description' content='Due to an unfortunate series of events, I&#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Using org-mode for meeting minutes • egli.dev'>
-<meta property='og:description' content='Due to an unfortunate series of events I&#39;m back in the business of taking meeting minutes. After a meeting I want to know    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.'>
+<meta property='og:description' content='Due to an unfortunate series of events, I&#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.'>
 <meta property='og:url' content='http://egli.dev/posts/using-org-mode-for-meeting-minutes/'>
 <meta property='og:site_name' content='egli.dev'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='Emacs'><meta property='article:published_time' content='2019-11-01T15:22:21&#43;01:00'/><meta property='article:modified_time' content='2019-11-01T15:22:21&#43;01:00'/><meta name='twitter:card' content='summary'>
@@ -97,8 +97,8 @@
   <div class='container entry-content'>
   
 <p>
-Due to an unfortunate series of events I&#39;m back in the business of
-taking meeting minutes. After a meeting I want to know
+Due to an unfortunate series of events, I&#39;m back in the business of
+taking meeting minutes. After a meeting I want to know:
 </p>
 <ol>
 <li>
@@ -118,30 +118,29 @@ what are the next tasks and who is taking care of them
 </li>
 </ol>
 <p>
-Well, I thought, nothing really too hard if you have org-mode in your
-tool chest. I searched for some prior art and found an <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2008-02/msg00117.html">old thread</a> on
-the mailing list where this very issue is discussed. The consensus at
-the time was that note taking (1.) is very well covered by
-org-mode. The requirement to automatically extract the action items
-into a tabulated report (3.) was also mentioned but no solution was
+Well, I thought, there is nothing really too hard if you have org-mode
+in your tool chest. I searched for some prior art and found an <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2008-02/msg00117.html">old
+thread</a> on the mailing list where this very issue is discussed. The
+consensus at the time was that note taking (1.) is very well covered
+by org-mode. The requirement to automatically extract the action items
+into a tabulated report (3.) was also mentioned, but no solution was
 presented.
 </p>
 <p>
 So I <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-10/msg00300.html">picked up the discussion again</a> and got some very interesting
-responses. This feedback led me down a path to give the standard
-<a href="https://orgmode.org/manual/Dynamic-Blocks.html#Dynamic-Blocks">dynamic block</a> <code>columnview</code> another chance. <em>Wouldn&#39;t it be nice if
-columnview had some kind of filtering capability?</em> The manual has no
-mentioning of it, but lo and behold the <a href="https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-colview.el#L1403">docstring</a> of
-<code>org-dblock-write:columnview</code> mentions a <code>:match</code> argument<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> that
-is exactly what we need. It allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or
-property</a>.
+responses. This feedback made me have another look at the standard
+<a href="https://orgmode.org/manual/Dynamic-Blocks.html#Dynamic-Blocks">dynamic block</a> <code>columnview</code>. <em>Wouldn&#39;t it be nice if columnview had
+some kind of filtering capability?</em> The manual does not mention it,
+but lo and behold the <a href="https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-colview.el#L1403">docstring</a> of <code>org-dblock-write:columnview</code>
+mentions a <code>:match</code> argument<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>. That is exactly what we need, as
+it allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or property</a>.
 </p>
 <p>
-How does that help us in getting a tabulated report of all the action
-items? Well, using the <code>:match</code> argument of <code>columnview</code> we can easily
-extract a list of all tasks with their owner and due date. With the
-<code>:format</code> argument we can even pick appropriate column names as shown
-below:
+But how does that help us in getting a tabulated report of all the
+action items? Well, by using the <code>:match</code> argument of <code>columnview</code> we
+can easily extract a list of all tasks with their owner and due
+date. With the <code>:format</code> argument we can even pick appropriate column
+names as shown below:
 </p>
 <div class="src src-org">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> Actions</span>
@@ -172,7 +171,7 @@ Assigning people to tasks
 </h3>
 <p>
 Initially I was using <a href="https://orgmode.org/manual/TODO-types.html#TODO-types">TODO keywords for people</a> as outlined in the
-manual. However Karl Voight <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-11/msg00044.html">convinced me</a> to drop the idea and instead
+manual. However Karl Voit <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-11/msg00044.html">convinced me</a> to drop the idea and instead
 simply use tags to assign a task to people. That way we can also
 assign more than one person to a task as you can see in the following
 example:
@@ -187,10 +186,10 @@ example:
 Conclusion
 </h3>
 <p>
-As we have seen org-mode can be used very well to produce meeting
+As we have seen, org-mode can be used very well to produce meeting
 minutes. Take your notes as usual, mark action items as TODO items and
 tag them with the person that is responsible for that item. If you
-also want a list of all decisions then tag the headline for the
+also want a list of all decisions, then tag the headline for the
 decision with a specific tag, for example <code>Decision</code>.
 </p>
 <p>

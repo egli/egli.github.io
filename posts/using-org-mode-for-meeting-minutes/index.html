@@ -131,9 +131,9 @@ So I <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-10/msg00300.
 responses. This feedback made me have another look at the standard
 <a href="https://orgmode.org/manual/Dynamic-Blocks.html#Dynamic-Blocks">dynamic block</a> <code>columnview</code>. <em>Wouldn&#39;t it be nice if columnview had
 some kind of filtering capability?</em> The manual does not mention it,
-but lo and behold the <a href="https://code.orgmode.org/bzg/org-mode/src/master/lisp/org-colview.el#L1403">docstring</a> of <code>org-dblock-write:columnview</code>
-mentions a <code>:match</code> argument<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>. That is exactly what we need, as
-it allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or property</a>.
+but lo and behold the <a href="https://code.orgmode.org/bzg/org-mode/src/5417e384ebab58e560fe6a80eee7bc58b1ef8645/lisp/org-colview.el#L1454">docstring</a> of <code>org-dblock-write:columnview</code>
+mentions<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> a <code>:match</code> argument<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>. That is exactly what we
+need, as it allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or property</a>.
 </p>
 <p>
 But how does that help us in getting a tabulated report of all the
@@ -197,7 +197,7 @@ To get tabulated reports of all action items and all the decisions
 taken just insert two columnviews as shown above. And that&#39;s it, you
 have the meeting minutes including a list of what was decided and a
 list of the next tasks. You can then export the minutes to any format
-you please<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup> and share them with your coworkers.
+you please<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup> and share them with your coworkers.
 </p>
 <h3 id="headline-3">
 Complete example
@@ -252,6 +252,14 @@ Footnotes
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
 <p>
+as of version 9.2 of org-mode
+</p>
+</div>
+</div>
+<div class="footnote-definition">
+<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<div class="footnote-body">
+<p>
 Is something an undocumented feature if it is mentioned only in
 a doc string but not in the manual? The discoverability in this case
 is very low as the function name is not immediately clear from the
@@ -262,7 +270,7 @@ this.
 </div>
 </div>
 <div class="footnote-definition">
-<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
+<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
 <div class="footnote-body">
 <p>
 as long as it is one of the formats supported by the <a href="https://orgmode.org/manual/Exporting.html#Exporting">org-mode

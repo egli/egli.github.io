@@ -4,17 +4,27 @@
   
   <url>
     <loc>http://egli.dev/tags/</loc>
-    <lastmod>2020-08-10T21:25:57+01:00</lastmod>
+    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/</loc>
-    <lastmod>2020-08-10T21:25:57+01:00</lastmod>
+    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/tags/debian/</loc>
+    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/</loc>
-    <lastmod>2020-08-10T21:25:57+01:00</lastmod>
+    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/update-alternatives-for-clang-format/</loc>
+    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
   </url>
   
   <url>
@@ -140,11 +150,6 @@
   <url>
     <loc>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</loc>
     <lastmod>2013-12-06T15:42:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/debian/</loc>
-    <lastmod>2013-10-11T13:53:55+00:00</lastmod>
   </url>
   
   <url>

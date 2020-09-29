@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/travis/</link>
     <description>Recent content in Travis on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Oct 2014 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/travis/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,20 +13,12 @@
     <item>
       <title>Continuous integration for liblouis</title>
       <link>http://egli.dev/posts/travis-for-liblouis/</link>
-      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/travis-for-liblouis/</guid>
-      <description>&lt;p&gt;
-Once in a while when creating a pull request for projects on github I&amp;#39;m
-pleasantly surprised that this automatically launches a build server,
-runs the test suite for the project and hopefully gives you a green
-light for your pull request.
-&lt;/p&gt;
-&lt;p&gt;
-For liblouis we did have a self-hosted continuous integration solution
-based on Jenkins for a long time but it seems to have fallen prey to
-some bit rot.
-&lt;/p&gt;</description>
+      <description>Once in a while when creating a pull request for projects on github I&amp;rsquo;m pleasantly surprised that this automatically launches a build server, runs the test suite for the project and hopefully gives you a green light for your pull request.
+For liblouis we did have a self-hosted continuous integration solution based on Jenkins for a long time but it seems to have fallen prey to some bit rot.
+So, ever since liblouis moved to github I wanted to set up Travis for continuous integration.</description>
     </item>
     
   </channel>

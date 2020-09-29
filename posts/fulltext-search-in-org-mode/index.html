@@ -2,40 +2,16 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='
-Quite often I&#39;m trying to find something that I jotted down in one of
-my many org-mode files somewhere. This usually amounts to something
-like
-
-
-M-x rgreg RET foo RET *.org RET ~/ RET
-
-
-Then I wait until grep has finished rummaging trough my home
-directory. Wouldn&#39;t it be nice if there was something like fulltext
-search for org-mode files, i.e. if there was a tool that would index
-all my files and provide for a fast search capability?
-'>
+<meta name='description' content='Quite often I&rsquo;m trying to find something that I jotted down in one of my many org-mode files somewhere. This usually amounts to something like
+M-x rgreg RET foo RET *.org RET ~/ RET Then I wait until grep has finished rummaging trough my home directory. Wouldn&rsquo;t it be nice if there was something like fulltext search for org-mode files, i.e. if there was a tool that would index all my files and provide for a fast search capability?'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Fulltext Search in org-mode • egli.dev'>
-<meta property='og:description' content='
-Quite often I&#39;m trying to find something that I jotted down in one of
-my many org-mode files somewhere. This usually amounts to something
-like
-
-
-M-x rgreg RET foo RET *.org RET ~/ RET
-
-
-Then I wait until grep has finished rummaging trough my home
-directory. Wouldn&#39;t it be nice if there was something like fulltext
-search for org-mode files, i.e. if there was a tool that would index
-all my files and provide for a fast search capability?
-'>
+<meta property='og:description' content='Quite often I&rsquo;m trying to find something that I jotted down in one of my many org-mode files somewhere. This usually amounts to something like
+M-x rgreg RET foo RET *.org RET ~/ RET Then I wait until grep has finished rummaging trough my home directory. Wouldn&rsquo;t it be nice if there was something like fulltext search for org-mode files, i.e. if there was a tool that would index all my files and provide for a fast search capability?'>
 <meta property='og:url' content='http://egli.dev/posts/fulltext-search-in-org-mode/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Emacs'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='fulltext'><meta property='article:tag' content='search'><meta property='article:published_time' content='2018-09-20T13:52:47&#43;02:00'/><meta property='article:modified_time' content='2018-09-20T13:52:47&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Emacs'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='fulltext-search'><meta property='article:published_time' content='2018-09-20T13:52:00&#43;02:00'/><meta property='article:modified_time' content='2018-09-20T13:52:00&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -96,7 +72,7 @@ all my files and provide for a fast search capability?
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2018-09-20T13:52:47&#43;02:00'>2018-09-20</time>
+  <time class='entry-date' datetime='2018-09-20T13:52:00&#43;02:00'>2018-09-20</time>
 </span>
 
   
@@ -121,75 +97,44 @@ all my files and provide for a fast search capability?
   
 
   <div class='container entry-content'>
-  <p>
-Quite often I&#39;m trying to find something that I jotted down in one of
+  <p>Quite often I&rsquo;m trying to find something that I jotted down in one of
 my many org-mode files somewhere. This usually amounts to something
-like
-</p>
-<div class="src src-shell">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">M-x rgreg RET foo RET *.org RET ~/ RET</code></pre></div>
-</div>
-<p>
-Then I wait until grep has finished rummaging trough my home
-directory. Wouldn&#39;t it be nice if there was something like fulltext
+like</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">M-x rgreg RET foo RET *.org RET ~/ RET
+</code></pre></div><p>Then I wait until grep has finished rummaging trough my home
+directory. Wouldn&rsquo;t it be nice if there was something like fulltext
 search for org-mode files, i.e. if there was a tool that would index
-all my files and provide for a fast search capability?
-</p>
-<p>
-Well, enter <a href="https://github.com/google/codesearch">Code Search</a>
-</p>
-<div class="src src-shell">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install codesearch</code></pre></div>
-</div>
-<p>
-Then build an index of all your org-mode files
-</p>
-<div class="src src-shell">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find . -type f <span style="color:#ae81ff">\(</span> -name <span style="color:#ae81ff">\*</span>.org <span style="color:#ae81ff">\)</span> -print | xargs cindex</code></pre></div>
-</div>
-<p>
-When searching I&#39;m old school. I want the tool to behave just like
+all my files and provide for a fast search capability?</p>
+<p>Well, enter <a href="https://github.com/google/codesearch">Code Search</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install codesearch
+</code></pre></div><p>Then build an index of all your org-mode files</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find . -type f <span style="color:#ae81ff">\(</span> -name <span style="color:#ae81ff">\*</span>.org <span style="color:#ae81ff">\)</span> -print | xargs cindex
+</code></pre></div><p>When searching I&rsquo;m old school. I want the tool to behave just like
 <code>rgrep</code> : give me a buffer where I can navigate through the hits.
-That&#39;s why I invoke <code>rgrep</code> in a round-about way:
-</p>
-<div class="src src-text">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">C-u C-u M-x rgrep RET C-a csearch -n foo RET</code></pre></div>
-</div>
-<p>
-This will basically re-use all of the <code>rgrep</code> functionality but use
-<code>csearch</code> as the actual program to execute.
-</p>
-<p>
-I&#39;m sure this could be improved with a tiny bit of elisp or you could
-explore a dedicated package named <a href="https://github.com/abingham/emacs-codesearch">emacs-codesearch</a>. I haven&#39;t tried it
-but from reading the source it doesn&#39;t seem to provide that standard
-grep mode buffer.
-</p>
-<h2 id="headline-1">
-Implementation
-</h2>
-<p>
-In the end I came up with the following snippet in my Emacs
+That&rsquo;s why I invoke <code>rgrep</code> in a round-about way:</p>
+<pre><code class="language-nil" data-lang="nil">C-u C-u M-x rgrep RET C-a csearch -n foo RET
+</code></pre><p>This will basically re-use all of the <code>rgrep</code> functionality but use
+<code>csearch</code> as the actual program to execute.</p>
+<p>I&rsquo;m sure this could be improved with a tiny bit of elisp or you could
+explore a dedicated package named <a href="https://github.com/abingham/emacs-codesearch">emacs-codesearch</a>. I haven&rsquo;t tried it
+but from reading the source it doesn&rsquo;t seem to provide that standard
+grep mode buffer.</p>
+<h2 id="implementation">Implementation</h2>
+<p>In the end I came up with the following snippet in my Emacs
 config. This gives me a new function <code>cgrep</code> that simply invokes
 <code>csearch</code> with the right options and dumps the result in a compilation
-buffer, just like <code>rgrep</code> does.
-</p>
-<div class="src src-elisp">
+buffer, just like <code>rgrep</code> does.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(defun cgrep (regexp)
   (interactive (<span style="color:#a6e22e">list</span> (grep-read-regexp)))
-  (compilation-start (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;csearch -n %s&#34;</span> regexp) <span style="color:#e6db74">&#39;grep-mode</span>))</code></pre></div>
-</div>
-<h2 id="headline-2">
-Flip side
-</h2>
-<p>
-By using <code>codesearch</code> you get blazingly fast search, that&#39;s for sure.
+  (compilation-start (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;csearch -n %s&#34;</span> regexp) <span style="color:#e6db74">&#39;grep-mode</span>))
+</code></pre></div><h2 id="flip-side">Flip side</h2>
+<p>By using <code>codesearch</code> you get blazingly fast search, that&rsquo;s for sure.
 There is a downside however: The list of files that you will be
 searching is fixed at the time you create the index. So if you want to
 search only a part of your org-mode files you will have to re-create
 the index before searching, which of course makes the search much
-slower than just using plain old <code>rgrep</code>.
-</p>
+slower than just using plain old <code>rgrep</code>.</p>
+
 </div>
 
   
@@ -200,7 +145,7 @@ slower than just using plain old <code>rgrep</code>.
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/emacs/'>Emacs</a>, <a class='tag' href='/tags/org-mode/'>org-mode</a>, <a class='tag' href='/tags/fulltext/'>fulltext</a>, <a class='tag' href='/tags/search/'>search</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/emacs/'>Emacs</a>, <a class='tag' href='/tags/org-mode/'>org-mode</a>, <a class='tag' href='/tags/fulltext-search/'>fulltext-search</a></div>
 
   </div>
 </footer>

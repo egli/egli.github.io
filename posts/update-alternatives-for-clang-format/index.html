@@ -2,14 +2,16 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.  The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.'>
+<meta name='description' content='clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.
+The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Switch between different versions of clang-format • egli.dev'>
-<meta property='og:description' content='clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.  The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.'>
+<meta property='og:description' content='clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.
+The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.'>
 <meta property='og:url' content='http://egli.dev/posts/update-alternatives-for-clang-format/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Debian'><meta property='article:published_time' content='2020-08-28T12:30:34&#43;02:00'/><meta property='article:modified_time' content='2020-08-28T12:30:34&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Debian'><meta property='article:published_time' content='2020-08-28T12:30:00&#43;02:00'/><meta property='article:modified_time' content='2020-08-28T12:30:00&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -70,7 +72,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2020-08-28T12:30:34&#43;02:00'>2020-08-28</time>
+  <time class='entry-date' datetime='2020-08-28T12:30:00&#43;02:00'>2020-08-28</time>
 </span>
 
   
@@ -95,37 +97,24 @@
   
 
   <div class='container entry-content'>
-  <p>
-<a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a> is an incredibly useful tool. It helps us to keep a
+  <p><a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a> is an incredibly useful tool. It helps us to keep a
 code base such as <a href="https://github.com/liblouis/liblouis">liblouis</a>, that has been touched by many
 contributors, at least somewhat stylistically consistent. We even
 <a href="https://github.com/liblouis/liblouis/blob/master/.travis/script/check-format.sh">added a test to the CI</a> to make sure new contributions match the
-existing style.
-</p>
-<p>
-The problem with <code>clang-format</code> is that its output is subtly different
+existing style.</p>
+<p>The problem with <code>clang-format</code> is that its output is subtly different
 for each new version of it. So we have to make sure we use exactly the
 same version as the CI machine does. Luckily Ubuntu 20.04 has packaged
 versions 7, 8, 9 and 10 so installing is not a problem. But what if
-you want to use a newer version of some other code base?
-</p>
-<p>
-This is exactly the kind of situation that the <a href="https://wiki.debian.org/DebianAlternatives">Debian Alternatives
+you want to use a newer version of some other code base?</p>
+<p>This is exactly the kind of situation that the <a href="https://wiki.debian.org/DebianAlternatives">Debian Alternatives
 System</a> is handling. Unfortunately <code>clang-format</code> has not been setup to
 work with <code>update-alternatives</code>. Luckily for us it is quite easy to
-extend the Debian alternatives system:
-</p>
-<p>
-First install <code>clang-format</code> (all versions that you need)
-</p>
-<div class="src src-shell">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt install clang-format clang-format-7 clang-format-8 clang-format-9 clang-format-10</code></pre></div>
-</div>
-<p>
-Then add a new group named <em>clang-format</em> to the alternatives system.
-You can do that manually or use the small script below:
-</p>
-<div class="src src-shell">
+extend the Debian alternatives system:</p>
+<p>First install <code>clang-format</code> (all versions that you need)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo apt install clang-format clang-format-7 clang-format-8 clang-format-9 clang-format-10
+</code></pre></div><p>Then add a new group named <em>clang-format</em> to the alternatives system.
+You can do that manually or use the small script below:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/usr/bin/env bash
 </span><span style="color:#75715e"></span>
 BINARY<span style="color:#f92672">=</span>/usr/bin/clang-format
@@ -134,23 +123,19 @@ MANPAGE<span style="color:#f92672">=</span>/usr/share/man/man1/clang-format
 <span style="color:#66d9ef">function</span> register_clang_format_version <span style="color:#f92672">{</span>
     local version<span style="color:#f92672">=</span>$1
     local priority<span style="color:#f92672">=</span>$2
-    
+
     update-alternatives <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	--install <span style="color:#e6db74">${</span>BINARY<span style="color:#e6db74">}</span> clang-format <span style="color:#e6db74">${</span>BINARY<span style="color:#e6db74">}</span>-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>priority<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	--slave <span style="color:#e6db74">${</span>MANPAGE<span style="color:#e6db74">}</span>.1.gz clang-format.1.gz <span style="color:#e6db74">${</span>MANPAGE<span style="color:#e6db74">}</span>-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>.1.gz
+</span><span style="color:#ae81ff"></span>      --install <span style="color:#e6db74">${</span>BINARY<span style="color:#e6db74">}</span> clang-format <span style="color:#e6db74">${</span>BINARY<span style="color:#e6db74">}</span>-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span> <span style="color:#e6db74">${</span>priority<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>      --slave <span style="color:#e6db74">${</span>MANPAGE<span style="color:#e6db74">}</span>.1.gz clang-format.1.gz <span style="color:#e6db74">${</span>MANPAGE<span style="color:#e6db74">}</span>-<span style="color:#e6db74">${</span>version<span style="color:#e6db74">}</span>.1.gz
 <span style="color:#f92672">}</span>
 
 register_clang_format_version <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">100</span>
 register_clang_format_version <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">20</span>
 register_clang_format_version <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">10</span>
-register_clang_format_version <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">50</span></code></pre></div>
-</div>
-<p>
-You can now use <code>update-alternatives</code> to list all the possible
+register_clang_format_version <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">50</span>
+</code></pre></div><p>You can now use <code>update-alternatives</code> to list all the possible
 alternatives you have for the <code>clang-format</code> command and easily switch
-between them.
-</p>
-<div class="src src-shell">
+between them.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ clang-format --version
 clang-format version 10.0.0-4ubuntu1
 $ sudo update-alternatives --config clang-format
@@ -167,9 +152,8 @@ There are <span style="color:#ae81ff">4</span> choices <span style="color:#66d9e
 Press &lt;enter&gt; to keep the current choice<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span>, or type selection number: <span style="color:#ae81ff">2</span>
 update-alternatives: using /usr/bin/clang-format-7 to provide /usr/bin/clang-format <span style="color:#f92672">(</span>clang-format<span style="color:#f92672">)</span> in manual mode
 $ clang-format --version
-clang-format version 7.0.1-12 <span style="color:#f92672">(</span>tags/RELEASE_701/final<span style="color:#f92672">)</span></code></pre></div>
-</div>
-
+clang-format version 7.0.1-12 <span style="color:#f92672">(</span>tags/RELEASE_701/final<span style="color:#f92672">)</span>
+</code></pre></div>
 </div>
 
   

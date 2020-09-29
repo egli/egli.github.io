@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/</link>
     <description>Recent content in Tags on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Aug 2020 12:30:34 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 12:30:00 +0200</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Debian</title>
       <link>http://egli.dev/tags/debian/</link>
-      <pubDate>Fri, 28 Aug 2020 12:30:34 +0200</pubDate>
+      <pubDate>Fri, 28 Aug 2020 12:30:00 +0200</pubDate>
       
       <guid>http://egli.dev/tags/debian/</guid>
       <description></description>
@@ -22,7 +22,7 @@
     <item>
       <title>plaintextaccounting</title>
       <link>http://egli.dev/tags/plaintextaccounting/</link>
-      <pubDate>Mon, 10 Aug 2020 21:25:57 +0100</pubDate>
+      <pubDate>Mon, 10 Aug 2020 21:25:00 +0200</pubDate>
       
       <guid>http://egli.dev/tags/plaintextaccounting/</guid>
       <description></description>
@@ -31,16 +31,16 @@
     <item>
       <title>Emacs</title>
       <link>http://egli.dev/tags/emacs/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>LaTeX</title>
+      <title>latex</title>
       <link>http://egli.dev/tags/latex/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/tags/latex/</guid>
       <description></description>
@@ -49,106 +49,79 @@
     <item>
       <title>org-mode</title>
       <link>http://egli.dev/tags/org-mode/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/tags/org-mode/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>fulltext</title>
-      <link>http://egli.dev/tags/fulltext/</link>
-      <pubDate>Thu, 20 Sep 2018 13:52:47 +0200</pubDate>
+      <title>fulltext-search</title>
+      <link>http://egli.dev/tags/fulltext-search/</link>
+      <pubDate>Thu, 20 Sep 2018 13:52:00 +0200</pubDate>
       
-      <guid>http://egli.dev/tags/fulltext/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>search</title>
-      <link>http://egli.dev/tags/search/</link>
-      <pubDate>Thu, 20 Sep 2018 13:52:47 +0200</pubDate>
-      
-      <guid>http://egli.dev/tags/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Clojure</title>
-      <link>http://egli.dev/tags/clojure/</link>
-      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://egli.dev/tags/clojure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lisp</title>
-      <link>http://egli.dev/tags/lisp/</link>
-      <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://egli.dev/tags/lisp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Macros</title>
-      <link>http://egli.dev/tags/macros/</link>
-      <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://egli.dev/tags/macros/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CI</title>
-      <link>http://egli.dev/tags/ci/</link>
-      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://egli.dev/tags/ci/</guid>
+      <guid>http://egli.dev/tags/fulltext-search/</guid>
       <description></description>
     </item>
     
     <item>
       <title>liblouis</title>
       <link>http://egli.dev/tags/liblouis/</link>
-      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2015 17:25:00 +0200</pubDate>
       
       <guid>http://egli.dev/tags/liblouis/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Lisp</title>
+      <link>http://egli.dev/tags/lisp/</link>
+      <pubDate>Fri, 24 Oct 2014 00:00:00 +0200</pubDate>
+      
+      <guid>http://egli.dev/tags/lisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI</title>
+      <link>http://egli.dev/tags/ci/</link>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0200</pubDate>
+      
+      <guid>http://egli.dev/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Travis</title>
       <link>http://egli.dev/tags/travis/</link>
-      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0200</pubDate>
       
       <guid>http://egli.dev/tags/travis/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>gpg</title>
+      <link>http://egli.dev/tags/gpg/</link>
+      <pubDate>Thu, 12 Dec 2013 15:42:00 +0100</pubDate>
+      
+      <guid>http://egli.dev/tags/gpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Maven</title>
       <link>http://egli.dev/tags/maven/</link>
-      <pubDate>Fri, 06 Dec 2013 15:42:55 +0000</pubDate>
+      <pubDate>Thu, 12 Dec 2013 15:42:00 +0100</pubDate>
       
       <guid>http://egli.dev/tags/maven/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>pgp</title>
-      <link>http://egli.dev/tags/pgp/</link>
-      <pubDate>Fri, 06 Dec 2013 15:42:55 +0000</pubDate>
-      
-      <guid>http://egli.dev/tags/pgp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jekyll</title>
+      <title>Jekyll</title>
       <link>http://egli.dev/tags/jekyll/</link>
-      <pubDate>Fri, 04 Oct 2013 09:21:55 +0000</pubDate>
+      <pubDate>Fri, 04 Oct 2013 09:21:00 +0200</pubDate>
       
       <guid>http://egli.dev/tags/jekyll/</guid>
       <description></description>

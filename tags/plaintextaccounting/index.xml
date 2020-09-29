@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/plaintextaccounting/</link>
     <description>Recent content in plaintextaccounting on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Aug 2020 21:25:57 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 21:25:00 +0200</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/plaintextaccounting/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,19 +13,22 @@
     <item>
       <title>Quick and dirty PDF Reports for Plain Text Accounting - Part 2</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</link>
-      <pubDate>Mon, 10 Aug 2020 21:25:57 +0100</pubDate>
+      <pubDate>Mon, 10 Aug 2020 21:25:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</guid>
-      <description>Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.  If you are willing however to compromise somewhat in the looks department and don&amp;#39;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.  First of you probably need to install a few tools:   enscript    is used to generate Postscript from the output of hledger.</description>
+      <description>Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.
+If you are willing however to compromise somewhat in the looks department and don&amp;rsquo;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.
+First of you probably need to install a few tools:</description>
     </item>
     
     <item>
       <title>Quick and dirty PDF reports for Plain Text Accounting</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</guid>
-      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;#39;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?  hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;#39;s use the demo.</description>
+      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;rsquo;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?
+hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;rsquo;s use the demo.journal from the hledger web site as an example for this:</description>
     </item>
     
   </channel>

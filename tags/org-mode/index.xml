@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/org-mode/</link>
     <description>Recent content in org-mode on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 12 Feb 2020 15:01:56 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 15:01:00 +0100</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,41 +13,31 @@
     <item>
       <title>Quick and dirty PDF reports for Plain Text Accounting</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</guid>
-      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;#39;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?  hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;#39;s use the demo.</description>
+      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;rsquo;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?
+hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;rsquo;s use the demo.journal from the hledger web site as an example for this:</description>
     </item>
     
     <item>
       <title>Using org-mode for meeting minutes</title>
       <link>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</link>
-      <pubDate>Fri, 01 Nov 2019 15:22:21 +0100</pubDate>
+      <pubDate>Fri, 01 Nov 2019 15:22:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</guid>
-      <description>Due to an unfortunate series of events, I&amp;#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.</description>
+      <description>Due to an unfortunate series of events, I&amp;rsquo;m back in the business of taking meeting minutes. After a meeting I want to know:
+ what was discussed what was decided what are the next tasks and who is taking care of them  Well, I thought, there is nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.</description>
     </item>
     
     <item>
       <title>Fulltext Search in org-mode</title>
       <link>http://egli.dev/posts/fulltext-search-in-org-mode/</link>
-      <pubDate>Thu, 20 Sep 2018 13:52:47 +0200</pubDate>
+      <pubDate>Thu, 20 Sep 2018 13:52:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/fulltext-search-in-org-mode/</guid>
-      <description>&lt;p&gt;
-Quite often I&amp;#39;m trying to find something that I jotted down in one of
-my many org-mode files somewhere. This usually amounts to something
-like
-&lt;/p&gt;
-&lt;div class=&#34;src src-shell&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;M-x rgreg RET foo RET *.org RET ~/ RET&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-Then I wait until grep has finished rummaging trough my home
-directory. Wouldn&amp;#39;t it be nice if there was something like fulltext
-search for org-mode files, i.e. if there was a tool that would index
-all my files and provide for a fast search capability?
-&lt;/p&gt;</description>
+      <description>Quite often I&amp;rsquo;m trying to find something that I jotted down in one of my many org-mode files somewhere. This usually amounts to something like
+M-x rgreg RET foo RET *.org RET ~/ RET Then I wait until grep has finished rummaging trough my home directory. Wouldn&amp;rsquo;t it be nice if there was something like fulltext search for org-mode files, i.e. if there was a tool that would index all my files and provide for a fast search capability?</description>
     </item>
     
   </channel>

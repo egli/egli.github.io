@@ -2,34 +2,14 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='
-I must say that I really enjoy working with Jekyll. It is dead-simple
-and still powerfull enough to the things I need. At first I was trying
-to go for a Clojure based solution such as static or madness. I had
-looked at static before and I like it, however I wanted to use
-bootstrap and wasn&#39;t really into converting the bootstrap html to a
-hiccup template. madness on the other hand uses enlive, so it would
-have been possible to use html templates, but what I didn&#39;t like was
-the fact that the generator and the actual site were basically the
-same code base just in different (git) branches.
-'>
+<meta name='description' content='I must say that I really enjoy working with Jekyll. It is dead-simple and still powerfull enough to the things I need. At first I was trying to go for a Clojure based solution such as static or madness. I had looked at static before and I like it, however I wanted to use bootstrap and wasn&rsquo;t really into converting the bootstrap html to a hiccup template. madness on the other hand uses enlive, so it would have been possible to use html templates, but what I didn&rsquo;t like was the fact that the generator and the actual site were basically the same code base just in different (git) branches.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='A static website for liblouis based on Jekyll • egli.dev'>
-<meta property='og:description' content='
-I must say that I really enjoy working with Jekyll. It is dead-simple
-and still powerfull enough to the things I need. At first I was trying
-to go for a Clojure based solution such as static or madness. I had
-looked at static before and I like it, however I wanted to use
-bootstrap and wasn&#39;t really into converting the bootstrap html to a
-hiccup template. madness on the other hand uses enlive, so it would
-have been possible to use html templates, but what I didn&#39;t like was
-the fact that the generator and the actual site were basically the
-same code base just in different (git) branches.
-'>
+<meta property='og:description' content='I must say that I really enjoy working with Jekyll. It is dead-simple and still powerfull enough to the things I need. At first I was trying to go for a Clojure based solution such as static or madness. I had looked at static before and I like it, however I wanted to use bootstrap and wasn&rsquo;t really into converting the bootstrap html to a hiccup template. madness on the other hand uses enlive, so it would have been possible to use html templates, but what I didn&rsquo;t like was the fact that the generator and the actual site were basically the same code base just in different (git) branches.'>
 <meta property='og:url' content='http://egli.dev/posts/a-static-website-for-liblouis/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='jekyll'><meta property='article:tag' content='liblouis'><meta property='article:published_time' content='2013-10-04T09:21:55Z'/><meta property='article:modified_time' content='2013-10-04T09:21:55Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='liblouis'><meta property='article:tag' content='Jekyll'><meta property='article:published_time' content='2013-10-04T09:21:00&#43;02:00'/><meta property='article:modified_time' content='2013-10-04T09:21:00&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -90,7 +70,7 @@ same code base just in different (git) branches.
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2013-10-04T09:21:55Z'>2013-10-04</time>
+  <time class='entry-date' datetime='2013-10-04T09:21:00&#43;02:00'>2013-10-04</time>
 </span>
 
   
@@ -115,47 +95,36 @@ same code base just in different (git) branches.
   
 
   <div class='container entry-content'>
-  <p>
-I must say that I really enjoy working with <a href="http://jekyllrb.com">Jekyll</a>. It is dead-simple
+  <p>I must say that I really enjoy working with <a href="http://jekyllrb.com">Jekyll</a>. It is dead-simple
 and still powerfull enough to the things I need. At first I was trying
 to go for a <a href="http://clojure.org">Clojure</a> based solution such as <a href="https://github.com/nakkaya/static">static</a> or <a href="https://github.com/algernon/madness">madness</a>. I had
 looked at static before and I like it, however I wanted to use
-<a href="http://getbootstrap.com/">bootstrap</a> and wasn&#39;t really into converting the bootstrap html to a
+<a href="http://getbootstrap.com/">bootstrap</a> and wasn&rsquo;t really into converting the bootstrap html to a
 <a href="https://github.com/weavejester/hiccup">hiccup</a> template. madness on the other hand uses <a href="https://github.com/cgrand/enlive">enlive</a>, so it would
-have been possible to use html templates, but what I didn&#39;t like was
+have been possible to use html templates, but what I didn&rsquo;t like was
 the fact that the generator and the actual site were basically the
-same code base just in different (git) branches.
-</p>
-<p>
-I&#39;m sure these problems could have easily be rectified, static is a
+same code base just in different (git) branches.</p>
+<p>I&rsquo;m sure these problems could have easily be rectified, static is a
 very small and simple code base, it would probably be straight-forward
-to extend it. But in the end it&#39;s the website that I want and the
-generator is just a means to that end so, let&#39;s go for something that
-&#34;just works&#34; and is widely used.
-</p>
-<p>
-Enter Jekyll.
-</p>
-<p>
-If you look around you&#39;ll find lots of people saying that you should
+to extend it. But in the end it&rsquo;s the website that I want and the
+generator is just a means to that end so, let&rsquo;s go for something that
+&ldquo;just works&rdquo; and is widely used.</p>
+<p>Enter Jekyll.</p>
+<p>If you look around you&rsquo;ll find lots of people saying that you should
 forget about Jekyll and go for <a href="http://octopress.org/">Octopress</a> instead. Octopress has
-everything that Jekyll doesn&#39;t have, etc. Turns out Jekyll has all I
+everything that Jekyll doesn&rsquo;t have, etc. Turns out Jekyll has all I
 need. I can create a nice layout based on bootstrap and do some small
 tweaks using the <a href="http://wiki.shopify.com/Liquid">Liquid template language</a> which is very similar to the
-template language used by <a href="https://www.djangoproject.com/">Django</a>.
-</p>
-<p>
-Another great thing is that the content is just <a href="http://daringfireball.net/projects/markdown/">markdown</a>, or <a href="http://redcloth.org/textile/">textile</a>.
+template language used by <a href="https://www.djangoproject.com/">Django</a>.</p>
+<p>Another great thing is that the content is just <a href="http://daringfireball.net/projects/markdown/">markdown</a>, or <a href="http://redcloth.org/textile/">textile</a>.
 This is ideal for old Emacs hats or screen readers. Since most of the
 developers of <a href="https://code.google.com/p/liblouis/">liblouis</a> use screen readers or/and braille displays and
-often have difficulties with web interfaces this is a big bonus.
-</p>
-<p>
-So, take Jekyll, sprinkle with a bit of bootstrap and you&#39;ll get a
+often have difficulties with web interfaces this is a big bonus.</p>
+<p>So, take Jekyll, sprinkle with a bit of bootstrap and you&rsquo;ll get a
 nice static website for a software project such as <a href="https://code.google.com/p/liblouis/">liblouis</a>. There is
 a landing page, news, online documentation, downloads and links to the
-Issue tracker and code repo on <a href="https://code.google.com/p/liblouis/">Google Code</a>. All you need basically.
-</p>
+Issue tracker and code repo on <a href="https://code.google.com/p/liblouis/">Google Code</a>. All you need basically.</p>
+
 </div>
 
   
@@ -166,7 +135,7 @@ Issue tracker and code repo on <a href="https://code.google.com/p/liblouis/">Goo
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/jekyll/'>jekyll</a>, <a class='tag' href='/tags/liblouis/'>liblouis</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/liblouis/'>liblouis</a>, <a class='tag' href='/tags/jekyll/'>Jekyll</a></div>
 
   </div>
 </footer>

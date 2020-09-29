@@ -5,7 +5,7 @@
     <link>http://egli.dev/posts/</link>
     <description>Recent content in Archive on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Aug 2020 12:30:34 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 12:30:00 +0200</lastBuildDate>
     
 	<atom:link href="http://egli.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,149 +13,125 @@
     <item>
       <title>Switch between different versions of clang-format</title>
       <link>http://egli.dev/posts/update-alternatives-for-clang-format/</link>
-      <pubDate>Fri, 28 Aug 2020 12:30:34 +0200</pubDate>
+      <pubDate>Fri, 28 Aug 2020 12:30:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/update-alternatives-for-clang-format/</guid>
-      <description>clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.  The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.</description>
+      <description>clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.
+The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.</description>
     </item>
     
     <item>
       <title>Quick and dirty PDF Reports for Plain Text Accounting - Part 2</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</link>
-      <pubDate>Mon, 10 Aug 2020 21:25:57 +0100</pubDate>
+      <pubDate>Mon, 10 Aug 2020 21:25:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</guid>
-      <description>Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.  If you are willing however to compromise somewhat in the looks department and don&amp;#39;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.  First of you probably need to install a few tools:   enscript    is used to generate Postscript from the output of hledger.</description>
+      <description>Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.
+If you are willing however to compromise somewhat in the looks department and don&amp;rsquo;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.
+First of you probably need to install a few tools:</description>
     </item>
     
     <item>
       <title>Quick and dirty PDF reports for Plain Text Accounting</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</link>
-      <pubDate>Wed, 12 Feb 2020 15:01:56 +0100</pubDate>
+      <pubDate>Wed, 12 Feb 2020 15:01:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</guid>
-      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;#39;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?  hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;#39;s use the demo.</description>
+      <description>Say you want to hand out financial reports (such as a balance sheet and an income statement) to a non-techie someone. Most likely that means handing out the statements on paper. Given that I&amp;rsquo;m doing Plain Text Accounting, what is an easy way to generate decent looking output on paper?
+hledger has two convenient commands to generate a balance sheet and an income statement. Let&amp;rsquo;s use the demo.journal from the hledger web site as an example for this:</description>
     </item>
     
     <item>
       <title>Using org-mode for meeting minutes</title>
       <link>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</link>
-      <pubDate>Fri, 01 Nov 2019 15:22:21 +0100</pubDate>
+      <pubDate>Fri, 01 Nov 2019 15:22:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</guid>
-      <description>Due to an unfortunate series of events, I&amp;#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.</description>
+      <description>Due to an unfortunate series of events, I&amp;rsquo;m back in the business of taking meeting minutes. After a meeting I want to know:
+ what was discussed what was decided what are the next tasks and who is taking care of them  Well, I thought, there is nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.</description>
     </item>
     
     <item>
       <title>Fulltext Search in org-mode</title>
       <link>http://egli.dev/posts/fulltext-search-in-org-mode/</link>
-      <pubDate>Thu, 20 Sep 2018 13:52:47 +0200</pubDate>
+      <pubDate>Thu, 20 Sep 2018 13:52:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/fulltext-search-in-org-mode/</guid>
-      <description>&lt;p&gt;
-Quite often I&amp;#39;m trying to find something that I jotted down in one of
-my many org-mode files somewhere. This usually amounts to something
-like
-&lt;/p&gt;
-&lt;div class=&#34;src src-shell&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;M-x rgreg RET foo RET *.org RET ~/ RET&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-Then I wait until grep has finished rummaging trough my home
-directory. Wouldn&amp;#39;t it be nice if there was something like fulltext
-search for org-mode files, i.e. if there was a tool that would index
-all my files and provide for a fast search capability?
-&lt;/p&gt;</description>
+      <description>Quite often I&amp;rsquo;m trying to find something that I jotted down in one of my many org-mode files somewhere. This usually amounts to something like
+M-x rgreg RET foo RET *.org RET ~/ RET Then I wait until grep has finished rummaging trough my home directory. Wouldn&amp;rsquo;t it be nice if there was something like fulltext search for org-mode files, i.e. if there was a tool that would index all my files and provide for a fast search capability?</description>
     </item>
     
     <item>
       <title>Why reimplementing liblouis in Java is a waste of your time</title>
       <link>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</link>
-      <pubDate>Mon, 04 May 2015 17:25:40 +0000</pubDate>
+      <pubDate>Mon, 04 May 2015 17:25:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</guid>
-      <description>&lt;p&gt;
-There are some proponents of the &lt;a href=&#34;https://github.com/snaekobbi&#34;&gt;Braille in DAISY Pipeline 2 project&lt;/a&gt;
-who would like to re-implement &lt;a href=&#34;https://github.com/liblouis/liblouis&#34;&gt;liblouis&lt;/a&gt; in Java. While I would much
-rather hack in Java than in C I still think it&amp;#39;s not a good idea to
-re-implement liblouis in Java.
-&lt;/p&gt;</description>
+      <description>There are some proponents of the Braille in DAISY Pipeline 2 project who would like to re-implement liblouis in Java. While I would much rather hack in Java than in C I still think it&amp;rsquo;s not a good idea to re-implement liblouis in Java.
+Let&amp;rsquo;s first have a look at what liblouis is:
+ Liblouis is a library and a set of tables that translates text into Braille. But first and foremost liblouis is a community of likeminded people from all over the world who work together to improve the state of Braille translation and formatting.</description>
     </item>
     
     <item>
       <title>Delete a file after it&#39;s being served</title>
       <link>http://egli.dev/posts/delete-a-file-after-its-being-served/</link>
-      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Nov 2014 13:32:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/delete-a-file-after-its-being-served/</guid>
-      <description>Seen on #clojure:  nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &amp;#34;/tmp/123324.pdf&amp;#34;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream  justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?</description>
+      <description>Seen on #clojure:
+nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &amp;quot;/tmp/123324.pdf&amp;quot;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream
+justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?</description>
     </item>
     
     <item>
       <title>We have macros</title>
       <link>http://egli.dev/posts/we-have-macros/</link>
-      <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Oct 2014 00:00:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/we-have-macros/</guid>
-      <description>&lt;p&gt;
-Welcome to the dark side. We have macros.
-&lt;/p&gt;</description>
+      <description>Welcome to the dark side. We have macros.
+I&amp;rsquo;ve been using Emacs ever since my final years at ETH when my mentor convinced me to give it a try. Was that really the late eighties? That can&amp;rsquo;t be true. Might have been 18.54 even. Then at my first real job I pushed for installation of 19.23 when it came out. I hacked on the ada-mode at the time.
+From decomplecting.org1:</description>
     </item>
     
     <item>
       <title>Continuous integration for liblouis</title>
       <link>http://egli.dev/posts/travis-for-liblouis/</link>
-      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/travis-for-liblouis/</guid>
-      <description>&lt;p&gt;
-Once in a while when creating a pull request for projects on github I&amp;#39;m
-pleasantly surprised that this automatically launches a build server,
-runs the test suite for the project and hopefully gives you a green
-light for your pull request.
-&lt;/p&gt;
-&lt;p&gt;
-For liblouis we did have a self-hosted continuous integration solution
-based on Jenkins for a long time but it seems to have fallen prey to
-some bit rot.
-&lt;/p&gt;</description>
+      <description>Once in a while when creating a pull request for projects on github I&amp;rsquo;m pleasantly surprised that this automatically launches a build server, runs the test suite for the project and hopefully gives you a green light for your pull request.
+For liblouis we did have a self-hosted continuous integration solution based on Jenkins for a long time but it seems to have fallen prey to some bit rot.
+So, ever since liblouis moved to github I wanted to set up Travis for continuous integration.</description>
     </item>
     
     <item>
       <title>Using the maven release plugin with gpg-agent</title>
       <link>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</link>
-      <pubDate>Fri, 06 Dec 2013 15:42:55 +0000</pubDate>
+      <pubDate>Thu, 12 Dec 2013 15:42:00 +0100</pubDate>
       
       <guid>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</guid>
-      <description>When creating releases using the maven release and the pgp plugin you are asked to sign your release. Due to an annoying bug in the release plugin you&amp;#39;ll never see the prompt and mvn will just hang. One way to get around this is to use the gpg-agent and to trigger gpg action before building the release so that gpg-agent will cache your passphrase (at least for some time).</description>
+      <description>When creating releases using the maven release and the pgp plugin you are asked to sign your release. Due to an annoying bug in the release plugin you&amp;rsquo;ll never see the prompt and mvn will just hang. One way to get around this is to use the gpg-agent and to trigger gpg action before building the release so that gpg-agent will cache your passphrase (at least for some time).
+$ touch /tmp/foo.</description>
     </item>
     
     <item>
       <title>Using dh_make to generate debian control files</title>
-      <link>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</link>
-      <pubDate>Fri, 11 Oct 2013 13:53:55 +0000</pubDate>
+      <link>http://egli.dev/posts/using-dh_make-to-generate-debian-control-files/</link>
+      <pubDate>Fri, 11 Oct 2013 13:53:00 +0200</pubDate>
       
-      <guid>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</guid>
-      <description>In order to properly deploy software to the production servers ideally it should be packaged as a Debian package. This ensures that I have all the needed dependencies, that the server is restarted and all the files are removed would I ever remove the package.  For Maven based projects such as the DAISY Pipeline this means that you&amp;#39;ll be using a Maven plugin such as jdeb to create the deb automatically.</description>
+      <guid>http://egli.dev/posts/using-dh_make-to-generate-debian-control-files/</guid>
+      <description>In order to properly deploy software to the production servers ideally it should be packaged as a Debian package. This ensures that I have all the needed dependencies, that the server is restarted and all the files are removed would I ever remove the package.
+For Maven based projects such as the DAISY Pipeline this means that you&amp;rsquo;ll be using a Maven plugin such as jdeb to create the deb automatically.</description>
     </item>
     
     <item>
       <title>A static website for liblouis based on Jekyll</title>
       <link>http://egli.dev/posts/a-static-website-for-liblouis/</link>
-      <pubDate>Fri, 04 Oct 2013 09:21:55 +0000</pubDate>
+      <pubDate>Fri, 04 Oct 2013 09:21:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/a-static-website-for-liblouis/</guid>
-      <description>&lt;p&gt;
-I must say that I really enjoy working with &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;. It is dead-simple
-and still powerfull enough to the things I need. At first I was trying
-to go for a &lt;a href=&#34;http://clojure.org&#34;&gt;Clojure&lt;/a&gt; based solution such as &lt;a href=&#34;https://github.com/nakkaya/static&#34;&gt;static&lt;/a&gt; or &lt;a href=&#34;https://github.com/algernon/madness&#34;&gt;madness&lt;/a&gt;. I had
-looked at static before and I like it, however I wanted to use
-&lt;a href=&#34;http://getbootstrap.com/&#34;&gt;bootstrap&lt;/a&gt; and wasn&amp;#39;t really into converting the bootstrap html to a
-&lt;a href=&#34;https://github.com/weavejester/hiccup&#34;&gt;hiccup&lt;/a&gt; template. madness on the other hand uses &lt;a href=&#34;https://github.com/cgrand/enlive&#34;&gt;enlive&lt;/a&gt;, so it would
-have been possible to use html templates, but what I didn&amp;#39;t like was
-the fact that the generator and the actual site were basically the
-same code base just in different (git) branches.
-&lt;/p&gt;</description>
+      <description>I must say that I really enjoy working with Jekyll. It is dead-simple and still powerfull enough to the things I need. At first I was trying to go for a Clojure based solution such as static or madness. I had looked at static before and I like it, however I wanted to use bootstrap and wasn&amp;rsquo;t really into converting the bootstrap html to a hiccup template. madness on the other hand uses enlive, so it would have been possible to use html templates, but what I didn&amp;rsquo;t like was the fact that the generator and the actual site were basically the same code base just in different (git) branches.</description>
     </item>
     
   </channel>

@@ -2,14 +2,16 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Due to an unfortunate series of events, I&#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.'>
+<meta name='description' content='Due to an unfortunate series of events, I&rsquo;m back in the business of taking meeting minutes. After a meeting I want to know:
+ what was discussed what was decided what are the next tasks and who is taking care of them  Well, I thought, there is nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Using org-mode for meeting minutes • egli.dev'>
-<meta property='og:description' content='Due to an unfortunate series of events, I&#39;m back in the business of taking meeting minutes. After a meeting I want to know:    what was discussed    what was decided    what are the next tasks and who is taking care of them    Well, I thought, there is nothing really too hard if you have org-mode in your tool chest.'>
+<meta property='og:description' content='Due to an unfortunate series of events, I&rsquo;m back in the business of taking meeting minutes. After a meeting I want to know:
+ what was discussed what was decided what are the next tasks and who is taking care of them  Well, I thought, there is nothing really too hard if you have org-mode in your tool chest. I searched for some prior art and found an old thread on the mailing list where this very issue is discussed.'>
 <meta property='og:url' content='http://egli.dev/posts/using-org-mode-for-meeting-minutes/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='Emacs'><meta property='article:published_time' content='2019-11-01T15:22:21&#43;01:00'/><meta property='article:modified_time' content='2019-11-01T15:22:21&#43;01:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='org-mode'><meta property='article:tag' content='Emacs'><meta property='article:published_time' content='2019-11-01T15:22:00&#43;01:00'/><meta property='article:modified_time' content='2019-11-01T15:22:00&#43;01:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -70,7 +72,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-11-01T15:22:21&#43;01:00'>2019-11-01</time>
+  <time class='entry-date' datetime='2019-11-01T15:22:00&#43;01:00'>2019-11-01</time>
 </span>
 
   
@@ -95,54 +97,32 @@
   
 
   <div class='container entry-content'>
-  
-<p>
-Due to an unfortunate series of events, I&#39;m back in the business of
-taking meeting minutes. After a meeting I want to know:
-</p>
+  <p>Due to an unfortunate series of events, I&rsquo;m back in the business of
+taking meeting minutes. After a meeting I want to know:</p>
 <ol>
-<li>
-<p>
-what was discussed
-</p>
-</li>
-<li>
-<p>
-what was decided
-</p>
-</li>
-<li>
-<p>
-what are the next tasks and who is taking care of them
-</p>
-</li>
+<li>what was discussed</li>
+<li>what was decided</li>
+<li>what are the next tasks and who is taking care of them</li>
 </ol>
-<p>
-Well, I thought, there is nothing really too hard if you have org-mode
+<p>Well, I thought, there is nothing really too hard if you have org-mode
 in your tool chest. I searched for some prior art and found an <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2008-02/msg00117.html">old
 thread</a> on the mailing list where this very issue is discussed. The
 consensus at the time was that note taking (1.) is very well covered
 by org-mode. The requirement to automatically extract the action items
 into a tabulated report (3.) was also mentioned, but no solution was
-presented.
-</p>
-<p>
-So I <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-10/msg00300.html">picked up the discussion again</a> and got some very interesting
+presented.</p>
+<p>So I <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-10/msg00300.html">picked up the discussion again</a> and got some very interesting
 responses. This feedback made me have another look at the standard
-<a href="https://orgmode.org/manual/Dynamic-Blocks.html#Dynamic-Blocks">dynamic block</a> <code>columnview</code>. <em>Wouldn&#39;t it be nice if columnview had
+<a href="https://orgmode.org/manual/Dynamic-Blocks.html#Dynamic-Blocks">dynamic block</a> <code>columnview</code>. <em>Wouldn&rsquo;t it be nice if columnview had
 some kind of filtering capability?</em> The manual does not mention it,
 but lo and behold the <a href="https://code.orgmode.org/bzg/org-mode/src/5417e384ebab58e560fe6a80eee7bc58b1ef8645/lisp/org-colview.el#L1454">docstring</a> of <code>org-dblock-write:columnview</code>
-mentions<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> a <code>:match</code> argument<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>. That is exactly what we
-need, as it allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or property</a>.
-</p>
-<p>
-But how does that help us in getting a tabulated report of all the
+mentions<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> a <code>:match</code> argument<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. That is exactly what we
+need, as it allows us to <a href="https://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties">filter by any tag or property</a>.</p>
+<p>But how does that help us in getting a tabulated report of all the
 action items? Well, by using the <code>:match</code> argument of <code>columnview</code> we
 can easily extract a list of all tasks with their owner and due
 date. With the <code>:format</code> argument we can even pick appropriate column
-names as shown below:
-</p>
-<div class="src src-org">
+names as shown below:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> Actions</span>
 <span style="color:#75715e">#+BEGIN: </span><span style="color:#75715e">columnview</span><span style="color:#75715e"> :id global :match &#34;/TODO|DONE&#34; :format &#34;%ITEM(What) %TAGS(Who) %DEADLINE(When) %TODO(State)&#34;
 </span><span style="color:#75715e"></span><span style="color:#e6db74">| What                     | Who          | When            | State |</span>
@@ -150,63 +130,41 @@ names as shown below:
 <span style="color:#e6db74">| Inventory of equipment   | :@Fred:      |                 | TODO  |</span>
 <span style="color:#e6db74">| Definition of main goals | :@Sara:      |                 | TODO  |</span>
 <span style="color:#e6db74">| Talk to companies        | :@Lucy:@Ted: | &lt;2020-03-01 So&gt; | DONE  |</span>
-<span style="color:#75715e">#+END:</span></code></pre></div>
-</div>
-<p>
-If we tag all the decisions with a specific tag <code>Decision</code> for
+<span style="color:#75715e">#+END:</span>
+</code></pre></div><p>If we tag all the decisions with a specific tag <code>Decision</code> for
 example, then we can use the very same technique to extract a list of
-all decisions:
-</p>
-<div class="src src-org">
+all decisions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> Decisions</span>
 <span style="color:#75715e">#+BEGIN: </span><span style="color:#75715e">columnview</span><span style="color:#75715e"> :id global :match &#34;Decision&#34; :format &#34;%ITEM(Decisions)&#34;
 </span><span style="color:#75715e"></span><span style="color:#e6db74">| Decisions                       |</span>
 <span style="color:#e6db74">|---------------------------------|</span>
 <span style="color:#e6db74">| Last meeting notes are approved |</span>
 <span style="color:#e6db74">| A new person will be hired      |</span>
-<span style="color:#75715e">#+END:</span></code></pre></div>
-</div>
-<h3 id="headline-1">
-Assigning people to tasks
-</h3>
-<p>
-Initially I was using <a href="https://orgmode.org/manual/TODO-types.html#TODO-types">TODO keywords for people</a> as outlined in the
+<span style="color:#75715e">#+END:</span>
+</code></pre></div><h2 id="assigning-people-to-tasks">Assigning people to tasks</h2>
+<p>Initially I was using <a href="https://orgmode.org/manual/TODO-types.html#TODO-types">TODO keywords for people</a> as outlined in the
 manual. However Karl Voit <a href="https://lists.gnu.org/archive/html/emacs-orgmode/2019-11/msg00044.html">convinced me</a> to drop the idea and instead
 simply use tags to assign a task to people. That way we can also
 assign more than one person to a task as you can see in the following
-example:
-</p>
-<div class="src src-org">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">***</span> Discussion
-<span style="color:#75715e">****</span><span style="color:#960050;background-color:#1e0010"> TODO</span> Inventory of equipment                                      :@Fred:
-<span style="color:#75715e">****</span><span style="color:#960050;background-color:#1e0010"> TODO</span> Definition of main goals                                    :@Sara:
-<span style="color:#75715e">****</span><span style="color:#e6db74"> DONE</span> Talk to companies                                      :@Lucy:@Ted:</code></pre></div>
-</div>
-<h3 id="headline-2">
-Conclusion
-</h3>
-<p>
-As we have seen, org-mode can be used very well to produce meeting
+example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> Discussion</span>
+<span style="color:#75715e">**</span><span style="color:#960050;background-color:#1e0010"> TODO</span> Inventory of equipment                                        :@Fred:
+<span style="color:#75715e">**</span><span style="color:#960050;background-color:#1e0010"> TODO</span> Definition of main goals                                      :@Sara:
+<span style="color:#75715e">**</span><span style="color:#e6db74"> DONE</span> Talk to companies                                        :@Lucy:@Ted:
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>As we have seen, org-mode can be used very well to produce meeting
 minutes. Take your notes as usual, mark action items as TODO items and
 tag them with the person that is responsible for that item. If you
 also want a list of all decisions, then tag the headline for the
-decision with a specific tag, for example <code>Decision</code>.
-</p>
-<p>
-To get tabulated reports of all action items and all the decisions
-taken just insert two columnviews as shown above. And that&#39;s it, you
+decision with a specific tag, for example <code>Decision</code>.</p>
+<p>To get tabulated reports of all action items and all the decisions
+taken just insert two columnviews as shown above. And that&rsquo;s it, you
 have the meeting minutes including a list of what was decided and a
 list of the next tasks. You can then export the minutes to any format
-you please<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup> and share them with your coworkers.
-</p>
-<h3 id="headline-3">
-Complete example
-</h3>
-<p>
-Let&#39;s have a look at a complete example of how my typical org-mode
-meeting minutes look like:
-</p>
-<div class="src src-org">
+you please<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and share them with your coworkers.</p>
+<h2 id="complete-example">Complete example</h2>
+<p>Let&rsquo;s have a look at a complete example of how my typical org-mode
+meeting minutes look like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> Project meeting</span>
 <span style="color:#75715e">**</span> Present at meeting
   <span style="color:#66d9ef">- [X]</span> Peter
@@ -240,46 +198,21 @@ meeting minutes look like:
 <span style="color:#e6db74">|-----------------------------------|</span>
 <span style="color:#e6db74">| Last meeting minutes are approved |</span>
 <span style="color:#e6db74">| A new person will be hired        |</span>
-<span style="color:#75715e">#+END:</span></code></pre></div>
-</div>
-<h3 id="headline-4">
-Footnotes
-</h3>
-<div class="footnotes">
-<hr class="footnotes-separatator">
-<div class="footnote-definitions">
-<div class="footnote-definition">
-<sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
-<div class="footnote-body">
-<p>
-as of version 9.2 of org-mode
-</p>
-</div>
-</div>
-<div class="footnote-definition">
-<sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
-<div class="footnote-body">
-<p>
-Is something an undocumented feature if it is mentioned only in
-a doc string but not in the manual? The discoverability in this case
-is very low as the function name is not immediately clear from the
-name of the dynamic block (<code>org-dblock-write:columnview</code> vs
-<code>columnview</code>). I would argue the manual should contain something about
-this.
-</p>
-</div>
-</div>
-<div class="footnote-definition">
-<sup id="footnote-3"><a href="#footnote-reference-3">3</a></sup>
-<div class="footnote-body">
-<p>
-as long as it is one of the formats supported by the <a href="https://orgmode.org/manual/Exporting.html#Exporting">org-mode
-exporter</a> or <a href="https://pandoc.org/">pandoc</a>.
-</p>
-</div>
-</div>
-</div>
-</div>
+<span style="color:#75715e">#+END:</span>
+</code></pre></div><section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>as of version 9.2 of org-mode <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Is something an undocumented feature if it is mentioned only in a doc string but not in the manual? The discoverability in this case is very low as the function name is not immediately clear from the name of the dynamic block (<code>org-dblock-write:columnview</code> vs <code>columnview</code>). I would argue the manual should contain something about this. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>as long as it is one of the formats supported by the <a href="https://orgmode.org/manual/Exporting.html#Exporting">org-mode exporter</a> or <a href="https://pandoc.org/">pandoc</a>. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 </div>
 

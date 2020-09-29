@@ -2,14 +2,18 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Seen on #clojure:  nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &#34;/tmp/123324.pdf&#34;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream  justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?'>
+<meta name='description' content='Seen on #clojure:
+nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &quot;/tmp/123324.pdf&quot;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream
+justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Delete a file after it&#39;s being served • egli.dev'>
-<meta property='og:description' content='Seen on #clojure:  nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &#34;/tmp/123324.pdf&#34;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream  justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?'>
+<meta property='og:description' content='Seen on #clojure:
+nonuby : any thoughts for best approach to delete a file after its being served by ring since returning { :body (FileInputStream. &quot;/tmp/123324.pdf&quot;) }. Im thinking of decorator approach where .close then delete the files after passing .close to the inner inputstream
+justin_smith : nonuby: what if you never put it on disk in the first place, and just handed an input stream that would be garbage collected to the client?'>
 <meta property='og:url' content='http://egli.dev/posts/delete-a-file-after-its-being-served/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Clojure'><meta property='article:published_time' content='2014-11-10T00:00:00Z'/><meta property='article:modified_time' content='2014-11-10T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2014-11-10T13:32:00&#43;01:00'/><meta property='article:modified_time' content='2014-11-10T13:32:00&#43;01:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -70,7 +74,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2014-11-10T00:00:00Z'>2014-11-10</time>
+  <time class='entry-date' datetime='2014-11-10T13:32:00&#43;01:00'>2014-11-10</time>
 </span>
 
   
@@ -95,38 +99,22 @@ One min read
   
 
   <div class='container entry-content'>
-  <p>
-Seen on #clojure:
-</p>
-<p>
-<strong>nonuby</strong> : any thoughts for best approach to delete a file after its
-being served by ring since returning <code class="verbatim">{ :body (FileInputStream.
-&#34;/tmp/123324.pdf&#34;) }</code>. Im thinking of decorator approach where <code>.close</code> 
-then delete the files after passing <code>.close</code> to the inner inputstream
-</p>
-<p>
-<strong>justin_smith</strong> : nonuby: what if you never put it on disk in the first
+  <p>Seen on #clojure:</p>
+<p><strong>nonuby</strong> : any thoughts for best approach to delete a file after its
+being served by ring since returning <code>{ :body (FileInputStream. &quot;/tmp/123324.pdf&quot;) }</code>. Im thinking of decorator approach where <code>.close</code>
+then delete the files after passing <code>.close</code> to the inner inputstream</p>
+<p><strong>justin_smith</strong> : nonuby: what if you never put it on disk in the first
 place, and just handed an input stream that would be garbage collected
-to the client?
-</p>
-<p>
-<strong>justin_smith</strong> : nonuby: either generate it directly into the stream,
-or if that can&#39;t be done, put the contents in an input stream, delete,
-then return the stream
-</p>
+to the client?</p>
+<p><strong>justin_smith</strong> : nonuby: either generate it directly into the stream,
+or if that can&rsquo;t be done, put the contents in an input stream, delete,
+then return the stream</p>
 
 </div>
 
   
 <footer class='entry-footer'>
-  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
-  <line x1="7" y1="7" x2="7" y2="7"/>
-  
-</svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/clojure/'>Clojure</a></div>
-
+  <div class='container sep-before'>
   </div>
 </footer>
 

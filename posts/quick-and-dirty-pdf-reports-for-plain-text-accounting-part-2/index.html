@@ -2,14 +2,18 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.  If you are willing however to compromise somewhat in the looks department and don&#39;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.  First of you probably need to install a few tools:   enscript    is used to generate Postscript from the output of hledger.'>
+<meta name='description' content='Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.
+If you are willing however to compromise somewhat in the looks department and don&rsquo;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.
+First of you probably need to install a few tools:'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Quick and dirty PDF Reports for Plain Text Accounting - Part 2 • egli.dev'>
-<meta property='og:description' content='Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.  If you are willing however to compromise somewhat in the looks department and don&#39;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.  First of you probably need to install a few tools:   enscript    is used to generate Postscript from the output of hledger.'>
+<meta property='og:description' content='Previously I wrote about how to generate PDF reports for Plain Text Accounting. The post was a tad on Org mode fanboy side in that it relies heavily on org-mode to generate the PDF.
+If you are willing however to compromise somewhat in the looks department and don&rsquo;t mind a whiff of old school nostalgia then you can produce PDF reports even simpler.
+First of you probably need to install a few tools:'>
 <meta property='og:url' content='http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/'>
 <meta property='og:site_name' content='egli.dev'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='plaintextaccounting'><meta property='article:published_time' content='2020-08-10T21:25:57&#43;01:00'/><meta property='article:modified_time' content='2020-08-10T21:25:57&#43;01:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='plaintextaccounting'><meta property='article:published_time' content='2020-08-10T21:25:00&#43;02:00'/><meta property='article:modified_time' content='2020-08-10T21:25:00&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.68.3" />
 
@@ -70,7 +74,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2020-08-10T21:25:57&#43;01:00'>2020-08-10</time>
+  <time class='entry-date' datetime='2020-08-10T21:25:00&#43;02:00'>2020-08-10</time>
 </span>
 
   
@@ -95,77 +99,38 @@
   
 
   <div class='container entry-content'>
-  <p>
-Previously I wrote about <a href="/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting">how to generate PDF reports</a> for Plain Text
+  <p>Previously I wrote about <a href="/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting">how to generate PDF reports</a> for Plain Text
 Accounting. The post was a tad on <a href="https://orgmode.org/">Org mode</a> fanboy side in that it
-relies heavily on org-mode to generate the PDF.
-</p>
-<p>
-If you are willing however to compromise somewhat in the looks
-department and don&#39;t mind a whiff of old school nostalgia then you can
-produce PDF reports even simpler.
-</p>
-<p>
-First of you probably need to install a few tools:
-</p>
+relies heavily on org-mode to generate the PDF.</p>
+<p>If you are willing however to compromise somewhat in the looks
+department and don&rsquo;t mind a whiff of old school nostalgia then you can
+produce PDF reports even simpler.</p>
+<p>First of you probably need to install a few tools:</p>
 <dl>
-<dt>
-<a href="https://www.gnu.org/software/enscript/"><code>enscript</code></a>
-</dt>
-<dd>
-<p>
-is used to generate Postscript from the output of <code>hledger</code>.
-</p>
-</dd>
-<dt>
-<code>ps2pdf</code>
-</dt>
-<dd>
-<p>
-will convert above Postscript to PDF.
-</p>
-</dd>
-<dt>
-<code>iconv</code>
-</dt>
-<dd>
-<p>
-unless your journal only contains ASCII you most likely
+<dt><a href="https://www.gnu.org/software/enscript/"><code>enscript</code></a></dt>
+<dd>is used to generate Postscript from the output of <code>hledger</code>.</dd>
+<dt><code>ps2pdf</code></dt>
+<dd>will convert above Postscript to PDF.</dd>
+<dt><code>iconv</code></dt>
+<dd>unless your journal only contains ASCII you most likely
 need <code>iconv</code> as <code>enscript</code> predates Unicode and cannot
 handle it (yes it is that old). So we need to convert the
-<code>hledger</code> output to ISO-8859-1 for example.
-</p>
-</dd>
-<dt>
-<code>pdftk</code>
-</dt>
-<dd>
-<p>
-Finally we will combine all resulting PDF files into one
-with the help of the <a href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDF Toolkit</a>.
-</p>
-</dd>
+<code>hledger</code> output to ISO-8859-1 for example.</dd>
+<dt><code>pdftk</code></dt>
+<dd>Finally we will combine all resulting PDF files into one
+with the help of the <a href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDF Toolkit</a>.</dd>
 </dl>
-<p>
-The basic command to generate a single PDF report is as follows (again
-we&#39;ll use the <a href="https://github.com/simonmichael/hledger_site/blob/072fddfb60b29ee84c8283d39bea9e6ae8ad3aea/files/demo.journal">demo.journal</a> from the hledger web site):
-</p>
-<div class="src src-shell">
+<p>The basic command to generate a single PDF report is as follows (again
+we&rsquo;ll use the <a href="https://github.com/simonmichael/hledger_site/blob/072fddfb60b29ee84c8283d39bea9e6ae8ad3aea/files/demo.journal">demo.journal</a> from the hledger web site):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hledger balancesheet -f demo.journal | <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	  iconv -c -f utf-8 -t ISO-8859-1 | <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	  enscript -b <span style="color:#e6db74">&#39;Balancesheet&#39;</span> -o - | <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>	  ps2pdf - balancesheet.pdf</code></pre></div>
-</div>
-<p>
-This generates a hledger report first, encodes it to ISO-8859-1,
+</span><span style="color:#ae81ff"></span>	iconv -c -f utf-8 -t ISO-8859-1 | <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	enscript -b <span style="color:#e6db74">&#39;Balancesheet&#39;</span> -o - | <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	ps2pdf - balancesheet.pdf
+</code></pre></div><p>This generates a hledger report first, encodes it to ISO-8859-1,
 renders it as Postscript and finally converts the result to PDF and
-stores it in a file.
-</p>
-<p>
-Now pack this into a Makefile to generate all the reports that you
-need for your financial statement.
-</p>
-<div class="src src-makefile">
+stores it in a file.</p>
+<p>Now pack this into a Makefile to generate all the reports that you
+need for your financial statement.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile">LEDGER<span style="color:#f92672">=</span>hledger
 JOURNAL<span style="color:#f92672">=</span>demo.journal
 ICONV<span style="color:#f92672">=</span>iconv -c -f utf-8 -t ISO-8859-1
@@ -173,30 +138,26 @@ ICONV<span style="color:#f92672">=</span>iconv -c -f utf-8 -t ISO-8859-1
 REPORTS<span style="color:#f92672">=</span> incomestatement.pdf balancesheet.pdf register.pdf all_transactions.pdf
 
 <span style="color:#a6e22e">financial_statement.pdf</span><span style="color:#f92672">:</span> ${REPORTS}
-	pdftk $^ cat output $@
+      pdftk $^ cat output $@
 
 <span style="color:#a6e22e">incomestatement.pdf</span><span style="color:#f92672">:</span> ${JOURNAL}
-	<span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> incomestatement -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;Incomestatement&#39;</span> -o - | ps2pdf - $@
+      <span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> incomestatement -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;Incomestatement&#39;</span> -o - | ps2pdf - $@
 
 <span style="color:#a6e22e">balancesheet.pdf</span><span style="color:#f92672">:</span> ${JOURNAL}
-	<span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> balancesheet -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span>  | enscript -b <span style="color:#e6db74">&#39;Balancesheet&#39;</span> -o - | ps2pdf - $@
+      <span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> balancesheet -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span>  | enscript -b <span style="color:#e6db74">&#39;Balancesheet&#39;</span> -o - | ps2pdf - $@
 
 <span style="color:#a6e22e">register.pdf</span><span style="color:#f92672">:</span> ${JOURNAL}
-	<span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> register Asset:Bank -w <span style="color:#ae81ff">91</span> -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;Register&#39;</span> -o - | ps2pdf - $@
+      <span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> register Asset:Bank -w <span style="color:#ae81ff">91</span> -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;Register&#39;</span> -o - | ps2pdf - $@
 
 <span style="color:#a6e22e">all_transactions.pdf</span><span style="color:#f92672">:</span> ${JOURNAL}
-	<span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> print -x -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;All Transactions||Page $$% of $$=&#39;</span> -o - | ps2pdf - $@
+      <span style="color:#e6db74">${</span>LEDGER<span style="color:#e6db74">}</span> print -x -f $&lt; | <span style="color:#e6db74">${</span>ICONV<span style="color:#e6db74">}</span> | enscript -b <span style="color:#e6db74">&#39;All Transactions||Page $$% of $$=&#39;</span> -o - | ps2pdf - $@
 
 <span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> clean
 <span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
-	rm -f <span style="color:#e6db74">${</span>REPORTS<span style="color:#e6db74">}</span> financial_statement.pdf
-</code></pre></div>
-</div>
-<p>
-The <a href="financial_reports.pdf">generated PDF</a> looks decent enough.
-Maybe not for a glossy annual report but certainly good enough to hand
-over to your accountant for approval.
-</p>
+      rm -f <span style="color:#e6db74">${</span>REPORTS<span style="color:#e6db74">}</span> financial_statement.pdf
+</code></pre></div><p>The <a href="financial_reports.pdf">generated PDF</a> looks decent enough. Maybe not for a glossy annual
+report but certainly good enough to hand over to your accountant for
+approval.</p>
 
 </div>
 

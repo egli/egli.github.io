@@ -5,7 +5,7 @@
     <link>http://egli.dev/tags/debian/</link>
     <description>Recent content in Debian on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Aug 2020 12:30:34 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 12:30:00 +0200</lastBuildDate>
     
 	<atom:link href="http://egli.dev/tags/debian/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,19 +13,21 @@
     <item>
       <title>Switch between different versions of clang-format</title>
       <link>http://egli.dev/posts/update-alternatives-for-clang-format/</link>
-      <pubDate>Fri, 28 Aug 2020 12:30:34 +0200</pubDate>
+      <pubDate>Fri, 28 Aug 2020 12:30:00 +0200</pubDate>
       
       <guid>http://egli.dev/posts/update-alternatives-for-clang-format/</guid>
-      <description>clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.  The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.</description>
+      <description>clang-format is an incredibly useful tool. It helps us to keep a code base such as liblouis, that has been touched by many contributors, at least somewhat stylistically consistent. We even added a test to the CI to make sure new contributions match the existing style.
+The problem with clang-format is that its output is subtly different for each new version of it. So we have to make sure we use exactly the same version as the CI machine does.</description>
     </item>
     
     <item>
       <title>Using dh_make to generate debian control files</title>
-      <link>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</link>
-      <pubDate>Fri, 11 Oct 2013 13:53:55 +0000</pubDate>
+      <link>http://egli.dev/posts/using-dh_make-to-generate-debian-control-files/</link>
+      <pubDate>Fri, 11 Oct 2013 13:53:00 +0200</pubDate>
       
-      <guid>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</guid>
-      <description>In order to properly deploy software to the production servers ideally it should be packaged as a Debian package. This ensures that I have all the needed dependencies, that the server is restarted and all the files are removed would I ever remove the package.  For Maven based projects such as the DAISY Pipeline this means that you&amp;#39;ll be using a Maven plugin such as jdeb to create the deb automatically.</description>
+      <guid>http://egli.dev/posts/using-dh_make-to-generate-debian-control-files/</guid>
+      <description>In order to properly deploy software to the production servers ideally it should be packaged as a Debian package. This ensures that I have all the needed dependencies, that the server is restarted and all the files are removed would I ever remove the package.
+For Maven based projects such as the DAISY Pipeline this means that you&amp;rsquo;ll be using a Maven plugin such as jdeb to create the deb automatically.</description>
     </item>
     
   </channel>

@@ -4,167 +4,146 @@
   
   <url>
     <loc>http://egli.dev/tags/</loc>
-    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+    <lastmod>2020-08-28T12:30:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/</loc>
-    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+    <lastmod>2020-08-28T12:30:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/debian/</loc>
-    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+    <lastmod>2020-08-28T12:30:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/</loc>
-    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+    <lastmod>2020-08-28T12:30:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/update-alternatives-for-clang-format/</loc>
-    <lastmod>2020-08-28T12:30:34+02:00</lastmod>
+    <lastmod>2020-08-28T12:30:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/plaintextaccounting/</loc>
-    <lastmod>2020-08-10T21:25:57+01:00</lastmod>
+    <lastmod>2020-08-10T21:25:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</loc>
-    <lastmod>2020-08-10T21:25:57+01:00</lastmod>
+    <lastmod>2020-08-10T21:25:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/emacs/</loc>
-    <lastmod>2020-02-12T15:01:56+01:00</lastmod>
+    <lastmod>2020-02-12T15:01:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/latex/</loc>
-    <lastmod>2020-02-12T15:01:56+01:00</lastmod>
+    <lastmod>2020-02-12T15:01:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/org-mode/</loc>
-    <lastmod>2020-02-12T15:01:56+01:00</lastmod>
+    <lastmod>2020-02-12T15:01:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting/</loc>
-    <lastmod>2020-02-12T15:01:56+01:00</lastmod>
+    <lastmod>2020-02-12T15:01:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/using-org-mode-for-meeting-minutes/</loc>
-    <lastmod>2019-11-01T15:22:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/fulltext/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2019-11-01T15:22:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/fulltext-search-in-org-mode/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
+    <lastmod>2018-09-20T13:52:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://egli.dev/tags/search/</loc>
-    <lastmod>2018-09-20T13:52:47+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/categories/</loc>
-    <lastmod>2015-05-04T17:25:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/categories/liblouis/</loc>
-    <lastmod>2015-05-04T17:25:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</loc>
-    <lastmod>2015-05-04T17:25:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/clojure/</loc>
-    <lastmod>2014-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/posts/delete-a-file-after-its-being-served/</loc>
-    <lastmod>2014-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/lisp/</loc>
-    <lastmod>2014-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/macros/</loc>
-    <lastmod>2014-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/posts/we-have-macros/</loc>
-    <lastmod>2014-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/ci/</loc>
-    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/posts/travis-for-liblouis/</loc>
-    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
+    <loc>http://egli.dev/tags/fulltext-search/</loc>
+    <lastmod>2018-09-20T13:52:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/liblouis/</loc>
-    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
+    <lastmod>2015-05-04T17:25:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/why-reimplementing-liblouis-in-java-is-a-waste-of-your-time/</loc>
+    <lastmod>2015-05-04T17:25:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/delete-a-file-after-its-being-served/</loc>
+    <lastmod>2014-11-10T13:32:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/tags/lisp/</loc>
+    <lastmod>2014-10-24T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/we-have-macros/</loc>
+    <lastmod>2014-10-24T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/tags/ci/</loc>
+    <lastmod>2014-10-23T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/posts/travis-for-liblouis/</loc>
+    <lastmod>2014-10-23T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/travis/</loc>
-    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
+    <lastmod>2014-10-23T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/tags/gpg/</loc>
+    <lastmod>2013-12-12T15:42:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/maven/</loc>
-    <lastmod>2013-12-06T15:42:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://egli.dev/tags/pgp/</loc>
-    <lastmod>2013-12-06T15:42:55+00:00</lastmod>
+    <lastmod>2013-12-12T15:42:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</loc>
-    <lastmod>2013-12-06T15:42:55+00:00</lastmod>
+    <lastmod>2013-12-12T15:42:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://egli.dev/posts/using_dh_make_to_generate_debian_control_files/</loc>
-    <lastmod>2013-10-11T13:53:55+00:00</lastmod>
+    <loc>http://egli.dev/posts/using-dh_make-to-generate-debian-control-files/</loc>
+    <lastmod>2013-10-11T13:53:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/posts/a-static-website-for-liblouis/</loc>
-    <lastmod>2013-10-04T09:21:55+00:00</lastmod>
+    <lastmod>2013-10-04T09:21:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://egli.dev/tags/jekyll/</loc>
-    <lastmod>2013-10-04T09:21:55+00:00</lastmod>
+    <lastmod>2013-10-04T09:21:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://egli.dev/categories/</loc>
   </url>
   
   <url>

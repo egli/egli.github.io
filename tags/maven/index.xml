@@ -5,11 +5,7 @@
     <link>http://egli.dev/tags/maven/</link>
     <description>Recent content in Maven on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Dec 2013 15:42:00 +0100</lastBuildDate>
-    
-	<atom:link href="http://egli.dev/tags/maven/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 Dec 2013 15:42:00 +0100</lastBuildDate><atom:link href="http://egli.dev/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using the maven release plugin with gpg-agent</title>
       <link>http://egli.dev/posts/using-the-maven-release-plugin-with-gpg-agent/</link>

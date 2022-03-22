@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Say you&rsquo;re running a popcorn booth. You buy some ingredients, you sell some popcorn and you go your merry ways. Last month you sold popcorn for two dollars but this month sales really go through the roof as you can see in the transactions below.
+2022-02-20 * Buy corn Expense:Material $ 1.00 Assets:Cash 2022-02-22 * Sell Popcorn Assets:Cash $ 2.00 Income:Cash 2022-03-20 * Buy corn Expense:Material $ 2.00 Assets:Cash 2022-03-22 * Sell Popcorn Assets:Cash $ 10.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Accrual accounting in the popcorn business • egli.dev'>
+<meta property='og:description' content='Say you&rsquo;re running a popcorn booth. You buy some ingredients, you sell some popcorn and you go your merry ways. Last month you sold popcorn for two dollars but this month sales really go through the roof as you can see in the transactions below.
+2022-02-20 * Buy corn Expense:Material $ 1.00 Assets:Cash 2022-02-22 * Sell Popcorn Assets:Cash $ 2.00 Income:Cash 2022-03-20 * Buy corn Expense:Material $ 2.00 Assets:Cash 2022-03-22 * Sell Popcorn Assets:Cash $ 10.'>
+<meta property='og:url' content='http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/'>
+<meta property='og:site_name' content='egli.dev'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='plaintextaccounting'><meta property='article:tag' content='hledger'><meta property='article:published_time' content='2022-03-22T14:20:00&#43;01:00'/><meta property='article:modified_time' content='2022-03-22T14:20:00&#43;01:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.80.0" />
+
+  <title>Accrual accounting in the popcorn business • egli.dev</title>
+  <link rel='canonical' href='http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/tags/'>Tags</a>
+      </li><li class='item'>
+        <a href='/posts/'>Archive</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>egli.dev</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Accrual accounting in the popcorn business</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2022-03-22T14:20:00&#43;01:00'>2022-03-22</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>Say you&rsquo;re running a popcorn booth. You buy some ingredients, you sell
+some popcorn and you go your merry ways. Last month you sold popcorn
+for two dollars but this month sales really go through the roof as you
+can see in the transactions below.</p>
+<pre><code class="language-ledger" data-lang="ledger">2022-02-20 * Buy corn
+    Expense:Material                          $ 1.00
+    Assets:Cash
+
+2022-02-22 * Sell Popcorn
+    Assets:Cash                               $ 2.00
+    Income:Cash
+
+2022-03-20 * Buy corn
+    Expense:Material                          $ 2.00
+    Assets:Cash
+
+2022-03-22 * Sell Popcorn
+    Assets:Cash                               $ 10.00
+    Income:Cash
+</code></pre><p>You can see this even better in the income statement when you compare
+the two months by using a monthly report interval:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hledger incomestatement --monthly -f popcorn.journal
+Income Statement 2022-02-20..2022-03-22
+
+                  ||    Feb      Mar
+==================++=================
+ Revenues         ||
+------------------++-----------------
+ Income:Cash      || $ 2.00  $ 10.00
+------------------++-----------------
+                  || $ 2.00  $ 10.00
+==================++=================
+ Expenses         ||
+------------------++-----------------
+ Expense:Material || $ 1.00   $ 2.00
+------------------++-----------------
+                  || $ 1.00   $ 2.00
+==================++=================
+ Net:             || $ 1.00   $ 8.00
+</code></pre></div><p>Now let&rsquo;s assume that your rich aunt gives you a hundred dollars to
+spiff up your popcorn booth. She gave you this money in February but
+you only get around to renovate your booth in March.</p>
+<pre><code class="language-ledger" data-lang="ledger">2022-02-20 * Buy corn
+    Expense:Material                          $ 1.00
+    Assets:Cash
+
+2022-02-22 * Sell Popcorn
+    Assets:Cash                               $ 2.00
+    Income:Cash
+
+2022-02-25 * Get some funds to spiff up the popcorn booth
+    Assets:Cash                             $ 100.00
+    Income:Aunt
+
+2022-03-20 * Buy corn
+    Expense:Material                          $ 2.00
+    Assets:Cash
+
+2022-03-22 * Sell Popcorn
+    Assets:Cash                              $ 10.00
+    Income:Cash
+
+2022-03-25 * Spiff up the popcorn booth
+    Expense:Renovation                       $ 100.00
+    Assets:Cash
+</code></pre><p>Now your income statement seems a bit skewed. It looks as February was
+a fantastic month where you made a whopping 101 Dollars profit and
+March was absolutely lousy because you had a loss of 92 Dollars.
+Something is not right. If the government gets wind of this you might
+even have to pay income tax for February since the business apparently
+went so well.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hledger incomestatement --monthly -f popcorn.journal
+Income Statement 2022-02-20..2022-03-25
+
+                    ||      Feb       Mar
+====================++====================
+ Revenues           ||
+--------------------++--------------------
+ Income:Aunt        || $ 100.00         0
+ Income:Cash        ||   $ 2.00   $ 10.00
+--------------------++--------------------
+                    || $ 102.00   $ 10.00
+====================++====================
+ Expenses           ||
+--------------------++--------------------
+ Expense:Material   ||   $ 1.00    $ 2.00
+ Expense:Renovation ||        0  $ 100.00
+--------------------++--------------------
+                    ||   $ 1.00  $ 102.00
+====================++====================
+ Net:               || $ 101.00  $ -92.00
+</code></pre></div><p>Your balance sheet also looks fishy. It looks like your net worth
+shrunk by 92 Dollars between February and March.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hledger balancesheet --monthly -f popcorn.journal
+Balance Sheet 2022-02-28..2022-03-31
+
+             || 2022-02-28  2022-03-31
+=============++========================
+ Assets      ||
+-------------++------------------------
+ Assets:Cash ||   $ 101.00      $ 9.00
+-------------++------------------------
+             ||   $ 101.00      $ 9.00
+=============++========================
+ Liabilities ||
+-------------++------------------------
+-------------++------------------------
+             ||
+=============++========================
+ Net:        ||   $ 101.00      $ 9.00
+</code></pre></div><p>Clearly you need to fix the way you account for the money to renovate
+the popcorn booth. You need a method named <a href="https://en.wikipedia.org/wiki/Accrual">accrual accounting</a>.</p>
+<h2 id="accrual-accounting">Accrual Accounting</h2>
+<p>You knew in February already that you were going to spend the money
+for the renovation at a later time, probably in March. I guess you
+could argue that you owed this money to the next month.</p>
+<p>To deal with this properly you have to add a fake expense to your
+books when you get the money from your aunt. This expense is paid with
+funds from our liabilities. And then in March when you actually do the
+renovation you add another transaction that reverses the fake expense
+from last month:</p>
+<pre><code class="language-ledger" data-lang="ledger">2022-02-25 * A fake expense to spiff up the popcorn booth
+    Expense:Accrual                         $ 100.00
+    Liabilities:Accrual
+
+2022-03-25 * Reverse the fake expense from last month
+    Liabilities:Accrual                     $ 100.00
+    Expense:Accrual
+</code></pre><p>The income statement looks much better now. You can compare the sales
+between February and March again.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hledger incomestatement --monthly -f popcorn.journal
+Income Statement 2022-02-20..2022-03-25
+
+                    ||      Feb        Mar
+====================++=====================
+ Revenues           ||
+--------------------++---------------------
+ Income:Cash        ||   $ 2.00    $ 10.00
+ Income:Aunt       || $ 100.00          0
+--------------------++---------------------
+                    || $ 102.00    $ 10.00
+====================++=====================
+ Expenses           ||
+--------------------++---------------------
+ Expense:Accrual    || $ 100.00  $ -100.00
+ Expense:Material   ||   $ 1.00     $ 2.00
+ Expense:Renovation ||        0   $ 100.00
+--------------------++---------------------
+                    || $ 101.00     $ 2.00
+====================++=====================
+ Net:               ||   $ 1.00     $ 8.00
+</code></pre></div><p>Also when you look at the balance sheet, you&rsquo;ll see that you do have
+the money for the renovation but since you also have a liability it
+doesn&rsquo;t look as if you were rich all of a sudden. It clearly reflects
+your real net worth.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hledger balancesheet --monthly -f popcorn.journal
+Balance Sheet 2022-02-28..2022-03-31
+
+                     || 2022-02-28  2022-03-31
+=====================++========================
+ Assets              ||
+---------------------++------------------------
+ Assets:Cash         ||   $ 101.00      $ 9.00
+---------------------++------------------------
+                     ||   $ 101.00      $ 9.00
+=====================++========================
+ Liabilities         ||
+---------------------++------------------------
+ Liabilities:Accrual ||   $ 100.00           0
+---------------------++------------------------
+                     ||   $ 100.00           0
+=====================++========================
+ Net:                ||     $ 1.00      $ 9.00
+</code></pre></div><h2 id="takeaways">Takeaways</h2>
+<p>The key takeaways here are:</p>
+<ul>
+<li>You want to be able to compare expenses and income between different
+periods.</li>
+<li>When you receive some money in one period but spend it in another
+period you will have to handle this properly otherwise it will skew
+your period-over-period results.</li>
+<li>When you receive the money in addition to the transaction describing
+the flow from income to assets you also record a transfer of funds
+between a liability account and a fake accrual expense account.</li>
+<li>When the expense really occurs you add that as a record (Cash →
+Renovation) and additionally you also add a record for the transfer
+back from the liability to the accrual expense account.</li>
+</ul>
+<p>I hope this example helps you to keep your books tidy so that you can
+properly compare the income as it grows month after month :-)</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/plaintextaccounting/'>plaintextaccounting</a>, <a class='tag' href='/tags/hledger/'>hledger</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/egli' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:christian@egli.dev' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2013-2022 Christian Egli &ndash; Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License"></a></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

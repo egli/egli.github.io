@@ -5,17 +5,7 @@
     <link>http://egli.dev/tags/plaintextaccounting/</link>
     <description>Recent content in plaintextaccounting on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Mar 2022 14:20:00 +0100</lastBuildDate><atom:link href="http://egli.dev/tags/plaintextaccounting/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Accrual accounting in the popcorn business</title>
-      <link>http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/</link>
-      <pubDate>Tue, 22 Mar 2022 14:20:00 +0100</pubDate>
-      
-      <guid>http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/</guid>
-      <description>Say you&amp;rsquo;re running a popcorn booth. You buy some ingredients, you sell some popcorn and you go your merry ways. Last month you sold popcorn for two dollars but this month sales really go through the roof as you can see in the transactions below.
-2022-02-20 * Buy corn Expense:Material $ 1.00 Assets:Cash 2022-02-22 * Sell Popcorn Assets:Cash $ 2.00 Income:Cash 2022-03-20 * Buy corn Expense:Material $ 2.00 Assets:Cash 2022-03-22 * Sell Popcorn Assets:Cash $ 10.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 10 Aug 2020 21:25:00 +0200</lastBuildDate><atom:link href="http://egli.dev/tags/plaintextaccounting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick and dirty PDF Reports for Plain Text Accounting - Part 2</title>
       <link>http://egli.dev/posts/quick-and-dirty-pdf-reports-for-plain-text-accounting-part-2/</link>

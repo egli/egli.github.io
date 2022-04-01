@@ -5,15 +5,16 @@
     <link>http://egli.dev/posts/</link>
     <description>Recent content in Archive on egli.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Mar 2022 14:20:00 +0100</lastBuildDate><atom:link href="http://egli.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 14:58:00 +0200</lastBuildDate><atom:link href="http://egli.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Accrual accounting in the popcorn business</title>
-      <link>http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/</link>
-      <pubDate>Tue, 22 Mar 2022 14:20:00 +0100</pubDate>
+      <title>Changing the compression type of a Debian package</title>
+      <link>http://egli.dev/posts/changing_the_compression_type_of_a_debian_package/</link>
+      <pubDate>Fri, 01 Apr 2022 14:58:00 +0200</pubDate>
       
-      <guid>http://egli.dev/posts/accrual-accounting-in-the-popcorn-business/</guid>
-      <description>Say you&amp;rsquo;re running a popcorn booth. You buy some ingredients, you sell some popcorn and you go your merry ways. Last month you sold popcorn for two dollars but this month sales really go through the roof as you can see in the transactions below.
-2022-02-20 * Buy corn Expense:Material $ 1.00 Assets:Cash 2022-02-22 * Sell Popcorn Assets:Cash $ 2.00 Income:Cash 2022-03-20 * Buy corn Expense:Material $ 2.00 Assets:Cash 2022-03-22 * Sell Popcorn Assets:Cash $ 10.</description>
+      <guid>http://egli.dev/posts/changing_the_compression_type_of_a_debian_package/</guid>
+      <description>When building a Debian package on a recent Ubuntu system it is quite likely that your package will be built with zstd compression.
+$ ar t foo.deb debian-binary control.tar.zst data.tar.zst This can cause problems if you try to install the package on a Debian system, as zstd is currently not supported by dpkg in Debian.
+$ dpkg -c foo.deb dpkg-deb: error: archive &amp;#39;foo.deb&amp;#39; uses unknown compression for member &amp;#39;control.tar.zst&amp;#39;, giving up You will have to unpack the deb and package it again using a different (older) compression type.</description>
     </item>
     
     <item>
